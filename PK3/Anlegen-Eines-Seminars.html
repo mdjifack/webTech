@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Anlegen eines Seminars</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="kopfbereich">
+            <div id="logo"><img src="./images/world.jpg" alt="logo" height="70" width="100"></div>
+            <div id="page-title">
+                <h3> Anlegen eines Seminars</h3>
+            </div>
+        </div>
+        <div id="navigation-kopf">
+            <a href="Liste-Der-Verfuegbaren-Raume.html">Roumliste</a> |
+            <a href="Detailseite-Zu-Einem-Raum.html">Roumdetails</a> |
+            <a href="Detailseite-Zur-Buchung.html">Buchungsdetails</a> |
+            <a href="Anlegen-Eines-Seminars.html">Alengen eines Seminars</a>
+        </div>
+        <div id="navigation-seite"></div>
+        <div id="inhalt">
+
+            <div class="form-add-seminar">
+                <form action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php" method="POST">
+                    <p>
+                        <label for="roomNumber"> Nummer des zu buchenden Raumes:</label>
+                        <input type="text" id="roomNumber" name="roomno" required maxlength="6" autofocus>
+                    </p>
+                    <p>
+                        <label for="reserreason"> Bezeichnung der Buchung:</label>
+                        <input type="text" id="reserreason" name="restitle" required maxlength="20" placeholder="Klausuren | Praktikum usw.">
+                    </p>
+                    <p>
+                        <label for="datum"> Datum der Buchung:</label>
+                        <input type="date" id="datum" name="resdate" required>
+                    </p>
+                    <p>
+                        Zeitraum <br>
+                        <label for="start"> Start:</label>
+                        <input type="time" id="start" name="resstart" required min="08:30" max="21:00"> <br> <br>
+                        <label for="end"> Ende:</label>
+                        <input type="time" id="end" name="resend" required max="22:00">
+                    </p>
+                    <p>
+                        <label for="person"> Buchende Person:</label>
+                        <select name="resperson" id="person">
+                            <option value="Prof.Dr.Rettinger"> Prof.Dr.Rettinger</option>
+                            <option value="Prof.Dr.Jörges"> Prof.Dr.Jörges</option>
+                            <option value="Prof.Dr.Harrer"> Prof.Dr.Harrer</option>
+                            <option value="Prof.Dr.Kunau"> Prof.Dr.Kunau</option>
+                            <option value="Prof.Dr.Stark"> Prof.Dr.Stark</option>
+                            <option value="Prof.Dr.Gröner"> Prof.Dr.Gröner</option>
+                            <option value="Prof.Dr.Hesseler"> Prof.Dr.Hesseler</option>
+                            <option value="Prof.Dr.Bab"> Prof.Dr.Bab</option>
+                            <option value="Prof.Dr.Niehüser"> Prof.Dr.Niehüser</option>
+                            <option value="Prof.Dr.Bohne"> Prof.Dr.Bohne</option>
+                            <option value="Prof.Dr.Kiunke"> Prof.Dr.Kiunke</option>
+                            <option value="Prof.Dr.Faix"> Prof.Dr.Faix</option>
+                        </select>
+                    </p>
+                    <p> <label for="ressparticipants"> Erwartete Anzahl an Teilnehmen:</label>
+                        <input type="text" id="ressparticipants" name="resparticipants">
+                    </p>
+                    <p> <label for="description"> Beschreibung der Buchung:</label>
+                        <textarea id="description" name="resdescription" cols="90" rows="10" maxlength="500" placeholder="Geben Sie eine Beschreibung!"></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="anlegen">
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+        <div id="zusatzinfos">
+            <ul>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+            </ul>
+        </div>
+        <div id="fussbereich"> © 2020 dafo001 & midji001</div>
+    </div>
+</body>
+
+</html>
