@@ -29,22 +29,21 @@
                         <legend>Formular zum Anlegen einer neuen Raumbuchung</legend>
 
                         <p>
-                            <label for="roomNumber"> Nummer des zu buchenden Raumes:</label>
+                            <label for="roomNumber"> Raumnummer:</label>
                             <input type="text" id="roomNumber" name="roomno" required maxlength="6" autofocus>
                         </p>
                         <p>
-                            <label for="reserreason"> Bezeichnung der Buchung:</label>
+                            <label for="reserreason"> Bezeichung:</label>
                             <input type="text" id="reserreason" name="restitle" required maxlength="20" placeholder="Klausuren | Praktikum usw.">
                         </p>
                         <p>
-                            <label for="datum"> Datum der Buchung:</label>
+                            <label for="datum"> Datum:</label>
                             <input type="date" id="datum" name="resdate" required>
                         </p>
                         <p>
-                            Zeitraum <br>
-                            <label for="start"> Start:</label>
+                            <label for="start"> Startzeit:</label>
                             <input type="time" id="start" name="resstart" required min="08:30" max="21:00"> <br> <br>
-                            <label for="end"> Ende:</label>
+                            <label for="end"> Endezeit:</label>
                             <input type="time" id="end" name="resend" required max="22:00">
                         </p>
                         <p>
@@ -67,7 +66,7 @@
                         <p> <label for="ressparticipants"> Erwartete Anzahl an Teilnehmen:</label>
                             <input type="text" id="ressparticipants" name="resparticipants">
                         </p>
-                        <p> <label for="description"> Beschreibung der Buchung:</label> <br>
+                        <p> <label for="description"> Beschreibung:</label> <br>
                             <textarea id="description" name="resdescription" cols="90" rows="10" maxlength="500" placeholder="Geben Sie eine Beschreibung!"></textarea>
                         </p>
                         <p>
