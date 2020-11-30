@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Liste-Der-Verfuegbaren-Raume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="logo"><img src="./images/world.jpg" alt="logo" height="70" width="100"></div>
+            <div id="page-title">
+                <h3> Liste der verfugbaren Räume</h3>
+            </div>
+        </header>
+        <nav>
+            <a href="Liste-Der-Verfuegbaren-Raume.html">Roumliste</a> |
+            <a href="Detailseite-Zu-Einem-Raum.html">Roumdetails</a> |
+            <a href="Detailseite-Zur-Buchung.html">Buchungsdetails</a> |
+            <a href="Anlegen-Eines-Seminars.html">Alengen eines Seminars</a>
+        </nav>
+        <div id="navigation-seite"></div>
+        <main>
+            <br>
+            <div class="form">
+                <form action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php" method="get">
+                    <fieldset>
+                        <legend>Suchformular</legend>
+                        <label for="roomno" class="req-form">Suchen:</label>
+                        <input type="text" id="roomno" name="roomno" pattern="[A-Z]{1}\.[1-3E]{1}\.[0-9]{2}" required maxlength="6">
+                        <input type="submit" value="Finden">
+                    </fieldset>
+                </form>
+            </div>
+
+
+            <ul class="room-list">
+                <li class="room-list-elem"> Raum <a href="Detailseite-Zu-Einem-Raum.html#A.E.01">A.E.01</a>, Hörsaal, EF 42
+                </li>
+                <li class="room-list-elem"> Raum <a href="Detailseite-Zu-Einem-Raum.html#E.1.38">E.1.38</a>, Praktikum, EF 44
+                </li>
+                <li class="room-list-elem"> Raum <a href="Detailseite-Zu-Einem-Raum.html#E.2.24">E.2.24</a>, Hörsaal, EF 40</li>
+                <li class="room-list-elem"> Raum <a href="Detailseite-Zu-Einem-Raum.html#B.2.24">B.2.24</a>, Hörsaal, EF 38b</li>
+                <li class="room-list-elem"> Raum <a href="Detailseite-Zu-Einem-Raum.html#B.2.21">B.2.21</a>, Praktikum, EF 42
+                </li>
+                <li class="room-list-elem"> Raum <a href="Detailseite-Zu-Einem-Raum.html#C.1.31">C.1.31</a>, Praktikum, EF 42
+                </li>
+            </ul>
+        </main>
+        <aside>
+            <ul>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+                <li>
+                    17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </li>
+            </ul>
+        </aside>
+        <footer> © 2020 dafo001 & midji001 & ghkam001</footer>
+    </div>
+</body>
+
+</html>
