@@ -5,7 +5,7 @@
 
 /*Aufgabe 1*/
 
-h3 {
+header h3 {
     color: dodgerblue;
 }
 
@@ -20,6 +20,10 @@ input:invalid {
     background-color: red;
 }
 
+input:required {
+    box-shadow: 6px 6px 6px black;
+}
+
 .req-form::after {
     content: '*';
     color: red;
@@ -29,6 +33,7 @@ fieldset,
 legend {
     margin: 5px;
     padding: 5px;
+    border-radius: 10px;
 }
 
 legend {
