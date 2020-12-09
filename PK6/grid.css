@@ -1,0 +1,51 @@
+/* *komplete Webseite Formatieren
+* PK6
+*/
+
+
+/*Aufgabe 1*/
+
+#container {
+    display: grid;
+    grid-template-areas: "kopf kopf" "navi navi" "inhalt zusatzt" "fuss fuss";
+    grid-template-columns: auto 30%;
+}
+
+header {
+    grid-area: kopf;
+}
+
+nav {
+    grid-area: navi;
+}
+
+aside {
+    grid-area: zusatzt;
+}
+
+footer {
+    grid-area: fuss;
+    width: 100%;
+}
+
+main {
+    grid-area: inhalt;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    border: 1px solid white;
+    background-color: orange;
+    padding: 1em;
+    text-align: center;
+}
+
+.form-add-seminar {
+    background-color: darkorange;
+}
+
+
+/*Aufgabe 2*/

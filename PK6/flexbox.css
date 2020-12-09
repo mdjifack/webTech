@@ -1,0 +1,36 @@
+/* *komplete Webseite mit flexbox Formatieren
+* PK5
+*/
+
+
+/*Aufgabe 4: Flexbox-Layouts */
+
+header,
+nav,
+main,
+aside,
+footer {
+    border: 1px solid white;
+    background-color: orange;
+    padding: 1em;
+    text-align: center;
+}
+
+.mainAside {
+    display: flex;
+}
+
+main {
+    flex: 3 60%;
+}
+
+footer {
+    width: 100%;
+}
+
+.room-list,
+.form,
+#block-one,
+#block-two {
+    background-color: darkorange;
+}
