@@ -16,6 +16,16 @@ footer {
     text-align: center;
 }
 
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .mainAside {
     display: flex;
 }

@@ -7,6 +7,7 @@
 
 header h3 {
     color: dodgerblue;
+    width: 50%;
 }
 
 
@@ -103,11 +104,6 @@ nav ul li {
 
 
 /*Aufgabe 2: Positionierung der Bilder*/
-
-.room-elem {
-    float: left;
-    clear: both;
-}
 
 #logo {
     float: left;

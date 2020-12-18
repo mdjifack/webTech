@@ -29,7 +29,34 @@ footer {
 }
 
 main {
+    display: grid;
     grid-area: inhalt;
+    grid-template-areas: "one three" "two three";
+    grid-template-columns: auto 40%;
+    justify-content: left;
+}
+
+#block-one {
+    grid-area: one;
+    border: 1px solid black;
+    background-color: darkorange;
+    padding: 1em;
+    margin: auto;
+}
+
+#block-two {
+    grid-area: two;
+    border: 1px solid black;
+    background-color: darkorange;
+    padding: 1em;
+    margin-top: 40%;
+    margin-right: 20%;
+}
+
+#block-three {
+    grid-area: three;
+    border: 1px solid black;
+    background-color: darkorange;
 }
 
 header,
@@ -49,3 +76,8 @@ footer {
 
 
 /*Aufgabe 2*/
+
+img {
+    max-width: 150px;
+    height: auto;
+}
