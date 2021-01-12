@@ -84,3 +84,44 @@ console.log("fourth room: Buchungslist")
 for (let elem of fourthRoom.buchungen) {
     console.log(elem);
 };
+
+/*********************************   PK9 Bereich Informationen ********************************* */
+// create Tag list and list elements
+let list = document.createElement("ul");
+let elemOne = document.createElement("li");
+let elemTwo = document.createElement("li");
+let elemThree = document.createElement("li");
+
+// Text in element einfuegen
+elemOne.textContent = firstRoom.nummer + " " + firstRoom.bezeichnung + " " + firstRoom.gebaeude + " " + firstRoom.kapazitaet + " " + firstRoom.ausstattungsmerkmale;
+elemTwo.textContent = secondRoom.nummer + " " + secondRoom.bezeichnung + " " + secondRoom.gebaeude + " " + secondRoom.kapazitaet + " " + secondRoom.ausstattungsmerkmale;
+elemThree.textContent = thirdRoom.nummer + " " + thirdRoom.bezeichnung + " " + thirdRoom.gebaeude + " " + thirdRoom.kapazitaet + " " + thirdRoom.ausstattungsmerkmale;
+
+// element an DOM anhaengen
+list.append(elemOne);
+list.append(elemTwo);
+list.append(elemThree);
+document.getElementById("block-one").append(list);
+
+/*********************************   PK9 Bereich Buchungen ********************************* */
+var reservation = [firstReservation.startzeit.toLocaleDateString(), firstReservation.startzeit.toLocaleTimeString(), firstReservation.endzeit.toLocaleTimeString(), firstReservation.bezeichnung, secondReservation.startzeit.toLocaleDateString(), secondReservation.startzeit.toLocaleTimeString(), secondReservation.endzeit.toLocaleTimeString(), secondReservation.bezeichnung, fourthReservation.startzeit.toLocaleDateString(), fourthReservation.startzeit.toLocaleTimeString(), fourthReservation.endzeit.toLocaleTimeString(), fourthReservation.bezeichnung]
+
+function table() {
+    var pos = 0;
+    for (var i = 0; i < 3; i++) {
+        // create a row
+        var tr = document.createElement("tr");
+        for (var j = 0; j < 4; j++) {
+            // create a cell
+            var td = document.createElement("td");
+            // add text on cell
+            td.textContent = reservation[pos];
+            pos++;
+            // connect the cell with the row
+            tr.appendChild(td);
+        }
+        // connect the row with the table
+        document.querySelector("tbody").appendChild(tr);
+    }
+};
+table();
