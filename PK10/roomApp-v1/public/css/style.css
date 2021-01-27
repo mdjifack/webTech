@@ -1,0 +1,130 @@
+/* *komplete Webseite Formatieren
+* PK4
+*/
+
+
+/*Aufgabe 1*/
+
+header h3 {
+    color: dodgerblue;
+    width: 50%;
+}
+
+
+/*Aufgabe 2*/
+
+input:valid {
+    background-color: green;
+}
+
+input:invalid {
+    background-color: red;
+}
+
+.req-form::after {
+    content: '*';
+    color: red;
+}
+
+fieldset,
+legend {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+legend {
+    font-size: smaller;
+    border: 1px solid;
+    font-style: italic;
+    box-shadow: 4px 4px 4px blue;
+}
+
+
+/*Aufgabe 3*/
+
+aside {
+    background-color: cornflowerblue;
+    padding: 3px;
+    margin: 3px;
+    border: 2px dotted;
+}
+
+nav a:hover {
+    background-color: darkgoldenrod;
+}
+
+#room-reservation thead {
+    background-color: darkgoldenrod;
+}
+
+#room-reservation tbody tr:nth-of-type(even) {
+    background-color: darkgreen;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    padding-bottom: 40px;
+}
+
+.room-elem a::after {
+    content: url(./images/Briefumschlag.png);
+}
+
+#page-title h3 {
+    text-shadow: 10px 10px 5px black;
+    letter-spacing: 0.5em;
+}
+
+
+/*Aufgabe 4*/
+
+#block-one,
+#block-two {
+    border-left: solid grey;
+    padding-left: 5px;
+}
+
+
+/* *komplete Webseite Formatieren
+* PK5
+*/
+
+
+/*Aufgabe 1: Navigationsbereich umbauen*/
+
+nav ul {
+    display: block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+#logo {
+    float: left;
+}
+
+
+/*Aufgabe 3: Fester Fußbereich*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+/*Aufgabe 3 PK7*/
+
+@media screen and (max-width: 768px) {
+    #page-title h3 {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #page-title h3 {
+        display: none;
+    }
+}

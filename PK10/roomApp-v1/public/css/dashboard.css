@@ -1,20 +1,7 @@
-/* *komplete Webseite Formatieren
-* PK6
-*/
-
-
-/*Aufgabe 2*/
-
-
-/*Zusatzinformationen und Navigationsmenue ausblenden*/
-
 aside,
 nav {
     display: none;
 }
-
-
-/* Kätschen bauen mit bestimte Eigenschaften */
 
 main div {
     width: 200px;
@@ -26,17 +13,11 @@ main div {
     text-align: center;
 }
 
-
-/* Box fluide halten  */
-
 main div a {
     position: relative;
     top: 50%;
     text-align: center;
 }
-
-
-/*fussbereich festlegen*/
 
 footer {
     position: fixed;
@@ -44,15 +25,9 @@ footer {
     width: 100%;
 }
 
-
-/*ueberschrift der Webanwendung aendern*/
-
 header h3 {
     color: tomato;
 }
-
-
-/*Webanwendung der Webseite stylen*/
 
 #page-title {
     text-shadow: 8px 7px 2px black;
@@ -77,7 +52,6 @@ main {
     flex-flow: row wrap;
     align-items: center;
     min-height: 40em;
-    justify-content: space-between;
 }
 
 header,
@@ -89,12 +63,10 @@ footer {
     text-align: center;
 }
 
-
-/*Aufgabe 3 PK7*/
-
 @media screen and (max-width: 768px) {
     main div,
-    main div a {
+    main div a,
+    main div img a {
         font-size: 5px;
     }
     main div {
@@ -105,8 +77,9 @@ footer {
 
 @media screen and (max-width: 480px) {
     main div,
-    main div a {
-        font-size: 2px;
+    main div a,
+    main div img a {
+        font-size: 3px;
     }
     main div {
         max-width: 100px;
@@ -124,4 +97,12 @@ footer {
     header h3 {
         display: none;
     }
+}
+
+#plus img {
+    height: auto;
+    width: auto;
+    margin-top: 39%;
+    margin-right: 3px;
+    text-align: center;
 }
