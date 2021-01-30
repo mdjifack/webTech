@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailseite-Zu-Einem-Raum</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+
+<body>
+    <div id="container">
+        <%- include('header.ejs', {variant:'Detailseite zu einem Raum'}); %>
+            <%- include("nav.ejs") %>
+                <div id="navigation-seite"></div>
+                <main>
+                    <section id="block-one">
+                        <div class="block-title">
+                            <h4> Informationen zum Raum </h4>
+                        </div>
+
+                    </section>
+
+                    <section id="block-two">
+                        <div class="block-title">
+                            <h4>Buchungen zum Raum </h4>
+                            <table id="room-reservation">
+                                <thead>
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Startuhrzeit</th>
+                                        <th>Enduhrzeit</th>
+                                        <th>Bezeichnung (zb. "Kolloquium")</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </section>
+                    <section id="block-three">
+                        <h4> Raum Bilder</h4>
+                        <figure class="room-img">
+                            <img src="img/auditorium.jpg" alt="aufitorium">
+                            <figcaption>A.E.01</figcaption>
+                        </figure>
+                        <figure class="room-img">
+                            <img src="img/chairs.jpg" alt="chairs">
+                            <figcaption>E.1.38</figcaption>
+                        </figure>
+                        <figure class="room-img">
+                            <img src="img/library.jpg" alt="library">
+                            <figcaption>E.2.24</figcaption>
+                        </figure>
+                    </section>
+                </main>
+                <aside>
+                    <ul>
+                        <li>
+                            17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        </li>
+                        <li>
+                            17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        </li>
+                        <li>
+                            17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        </li>
+                        <li>
+                            17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        </li>
+                    </ul>
+                </aside>
+                <%- include("footer.ejs") %>
+    </div>
+    <script src="js/skript.js"></script>
+</body>
+
+</html>

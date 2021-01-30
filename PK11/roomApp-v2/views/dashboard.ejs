@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+</head>
+
+<body>
+    <%- include('header.ejs', {variant:'dashboard'}); %>
+        <%- include("nav.ejs") %>
+            <div id="navigation-seite"></div>
+            <main>
+                <div><a href="raumliste">Raumliste</a></div>
+                <div> <a href="raumdetails">Raumdetails</a></div>
+                <div><a href="buchungsdetails">Buchungsdetails</a></div>
+                <div><a href="seminaranlegen">Neue Buchung anlegen</a></div>
+                <div id="plus"><img src="img/plusicon.png" alt="plusSymbol"></div>
+            </main>
+            <aside>
+                <ul>
+                    <li>
+                        17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li>
+                        17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li>
+                        17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li>
+                        17.11.2020 <br> Kaputter Beamer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                </ul>
+            </aside>
+            <%- include("footer.ejs") %>
+                <script src="js/dashboard.js"></script>
+</body>
+
+</html>
