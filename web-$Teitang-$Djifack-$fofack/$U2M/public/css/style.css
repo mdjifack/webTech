@@ -1,0 +1,42 @@
+/* 
+Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
+ */
+
+body,
+input {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: pink;
+}
+
+header {
+    grid-area: kopf;
+}
+
+nav {
+    grid-area: navi;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "kopf " "navi" "main" "footer";
+}
+
+header,
+nav,
+main,
+footer {
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid grey;
+}

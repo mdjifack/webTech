@@ -1,0 +1,49 @@
+/* rahmen hinzufuegen */
+
+body {
+    border: 2px solid black;
+}
+
+
+/* border nebeneinander haben im table*/
+
+table {
+    border-collapse: collapse;
+}
+
+
+/* border fuer table Row und Spalte */
+
+th,
+td {
+    border: 1px solid gray;
+    padding: 2px;
+}
+
+
+/* border thead bottom fett ausdruecken */
+
+th {
+    border-bottom: 3px solid gray;
+}
+
+
+/* liste stylen  
+
+Quelle: [Untertitel automatisch numerieren mit hilfe von counter Eigenschaften (vgl. https://www.w3schools.com/cssref/pr_gen_counter-reset.asp)]
+
+*/
+
+ol {
+    list-style-type: none;
+    padding-left: 1.4em;
+    counter-reset: Zaehler;
+}
+
+ol li {
+    counter-increment: Zaehler;
+}
+
+ol li h4::before {
+    content: counters(Zaehler, ".") ". ";
+}
