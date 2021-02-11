@@ -16,37 +16,36 @@
 
 <body>
     <header>
-        <div id="logo"><img src="../public/img/logo.jpg" alt=""></div>
+        <div id="logo">U2M</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="">StudyForm</a>
+                    <ul class="sub-menu">
+                        <li><a href="FormStudy.html">Formular Für Study Helfer</a></li>
+                        <li><a href="ListeStudy.html">Liste der Study Helfer</a></li>
+                        <li><a href="DetailsStudy.html">Information über Study Helfer</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Gruppe</a>
+                    <ul class="sub-menu">
+                        <li><a href="FormStudy.html">Formular Für Study Helfer</a></li>
+                        <li><a href="ListeStudy.html">Liste der Study Helfer</a></li>
+                        <li><a href="DetailsStudy.html">Information über Study Helfer</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Bibliothek</a>
+                    <ul class="sub-menu">
+                        <li><a href="FormStudy.html">Formular Für Study Helfer</a></li>
+                        <li><a href="ListeStudy.html">Liste der Study Helfer</a></li>
+                        <li><a href="DetailsStudy.html">Information über Study Helfer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
         <div id="page-title">
             <h3> Formular Für Study Helfer</h3>
         </div>
-
     </header>
-    <nav>
-        <ul>
-            <li>StudyForm
-                <ul>
-                    <li><a href="FormStudy.html">Formular Für Study Helfer</a></li>
-                    <li><a href="ListeStudy.html">Liste der Study Helfer</a></li>
-                    <li><a href="DetailsStudy.html">Information über Study Helfer</a></li>
-                </ul>
-            </li>
-            <li>Gruppe
-                <ul>
-                    <li>Formular</li>
-                    <li>liste</li>
-                    <li>Details</li>
-                </ul>
-            </li>
-            <li>Bibliothek
-                <ul>
-                    <li>Formular</li>
-                    <li>liste</li>
-                    <li>Details</li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
     <main>
         <div class="formstudy">
             <form action="ListeStudy.html" method="POST">
@@ -112,16 +111,21 @@
                         <label for="literatur">Literaturverzeichnis</label>
                         <input type="text" id="literatur">
                     </fieldset>
-                    <input type="button" value="anlegen" onclick=saveData()>
+                    <input id="sendform" type="button" value="anlegen" onclick="btnAction()">
                     <!-- <button type="button" onclick=saveData()> Anlegen</button> -->
                 </fieldset>
             </form>
         </div>
     </main>
     <footer>
-        &copy; By Teitang & Fofack & Djifack
+        <p>&copy; By Teitang & Fofack & Djifack</p>
+        <p>click on the following link to read our documentation:</p>
+        <ul>
+            <li><a href="../../doc/documentation.html">documentation</a></li>
+        </ul>
+
     </footer>
-    <script src="../models/modFormStudy.js"></script>
+    <!-- <script src="../models/modFormStudy.js"></script> -->
 </body>
 
 </html>

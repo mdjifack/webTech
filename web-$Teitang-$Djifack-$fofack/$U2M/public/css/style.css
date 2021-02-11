@@ -2,17 +2,17 @@
 Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
  */
 
+
+/* Grid Template area definieren und Seite mit Grid Stylen */
+
 body,
 input {
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    background-color: pink;
+    font-family: sans-serif;
 }
 
 header {
     grid-area: kopf;
+    background-color: #2c3e50;
 }
 
 nav {
@@ -23,20 +23,105 @@ main {
     grid-area: main;
 }
 
+
+/* footer stylen */
+
 footer {
     grid-area: footer;
+    background-color: #2c3e50;
+    bottom: 0;
+    width: 100%;
+    height: auto;
 }
 
 body {
     display: grid;
     grid-template-areas: "kopf " "navi" "main" "footer";
+    color: #666;
 }
 
-header,
-nav,
-main,
-footer {
-    margin: 10px;
-    padding: 10px;
-    border: 3px solid grey;
+
+/* logo Stylen */
+
+#logo {
+    float: left;
+    color: white;
+    margin-top: 40px;
+    margin-left: 70px;
+    font-style: italic;
+    font-size: 50px;
+}
+
+
+/* Page Title Stylen */
+
+#page-title {
+    margin-top: 150px;
+    margin-left: 450px;
+}
+
+
+/* Navigation Menu stylen */
+
+
+/* Schriftgröße definieren, Text In Gr0ßbuchstabe, remoove underline on list element */
+
+a,
+li {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+/* list Symbole (Punkte entfernen) */
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    float: right;
+    margin: 50px;
+    padding-right: 300px;
+}
+
+.menu li,
+.menu a {
+    display: inline-block;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: #fff;
+    display: block;
+    padding: 10px 1.5rem;
+}
+
+.menu a:hover {
+    background-color: #f34949;
+    color: #fff;
+}
+
+
+/* sub menu stylen */
+
+.sub-menu {
+    position: absolute;
+    background-color: #2c3e56;
+    width: 140px;
+    left: 0;
+    display: none;
+}
+
+.sub-menu li {
+    display: inline-block;
+}
+
+.menu li:hover .sub-menu {
+    display: block;
 }

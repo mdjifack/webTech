@@ -1,14 +1,14 @@
 /* rahmen hinzufuegen */
 
 body {
-    border: 2px solid black;
+    border: 2px solid black !important;
 }
 
 
 /* border nebeneinander haben im table*/
 
 table {
-    border-collapse: collapse;
+    border-collapse: collapse !important;
 }
 
 
@@ -16,15 +16,15 @@ table {
 
 th,
 td {
-    border: 1px solid gray;
-    padding: 2px;
+    border: 1px solid gray !important;
+    padding: 2px !important;
 }
 
 
 /* border thead bottom fett ausdruecken */
 
 th {
-    border-bottom: 3px solid gray;
+    border-bottom: 3px solid gray !important;
 }
 
 
@@ -35,15 +35,15 @@ Quelle: [Untertitel automatisch numerieren mit hilfe von counter Eigenschaften (
 */
 
 ol {
-    list-style-type: none;
-    padding-left: 1.4em;
-    counter-reset: Zaehler;
+    list-style-type: none !important;
+    padding-left: 1.4em !important;
+    counter-reset: Zaehler !important;
 }
 
 ol li {
-    counter-increment: Zaehler;
+    counter-increment: Zaehler !important;
 }
 
 ol li h4::before {
-    content: counters(Zaehler, ".") ". ";
+    content: counters(Zaehler, ".") ". " !important;
 }
