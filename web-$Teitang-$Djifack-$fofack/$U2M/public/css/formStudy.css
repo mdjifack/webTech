@@ -3,9 +3,11 @@ Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
  */
 
 .formstudy {
-    display: flex;
-    justify-content: center;
     padding: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 .textInput {
@@ -17,4 +19,8 @@ Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
 
 .button {
     padding-top: 3em;
+}
+
+#sendform:hover {
+    background-color: #ADFF2F;
 }
