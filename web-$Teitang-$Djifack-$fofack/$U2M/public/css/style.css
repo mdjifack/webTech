@@ -23,6 +23,12 @@ main {
     grid-area: main;
 }
 
+body {
+    display: grid;
+    grid-template-areas: "kopf " "navi" "main" "footer";
+    color: #666;
+}
+
 
 /* footer stylen */
 
@@ -32,18 +38,25 @@ footer {
     bottom: 0;
     width: 100%;
     height: auto;
+    text-align: center;
 }
 
-body {
-    display: grid;
-    grid-template-areas: "kopf " "navi" "main" "footer";
-    color: #666;
+footer ul {
+    text-decoration: none;
+}
+
+footer ul li a {
+    color: white;
+}
+
+footer ul li a:hover {
+    background-color: #f34949;
 }
 
 
 /* logo Stylen */
 
-#logo {
+#logo a {
     float: left;
     color: white;
     margin-top: 40px;
@@ -102,7 +115,7 @@ nav {
     padding: 10px 1.5rem;
 }
 
-.menu a:hover {
+.sub-menu a:hover {
     background-color: #f34949;
     color: #fff;
 }
