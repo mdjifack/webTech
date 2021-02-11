@@ -71,27 +71,11 @@ footer ul li a:hover {
 #page-title {
     margin-top: 150px;
     margin-left: 450px;
+    color: #FFA500;
 }
 
 
 /* Navigation Menu stylen */
-
-
-/* Schriftgröße definieren, Text In Gr0ßbuchstabe, remoove underline on list element */
-
-a,
-li {
-    font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-
-/* list Symbole (Punkte entfernen) */
-
-ul {
-    list-style: none;
-}
 
 nav {
     display: flex;
@@ -100,41 +84,59 @@ nav {
     padding-right: 300px;
 }
 
-.menu li,
-.menu a {
-    display: inline-block;
+
+/* Schriftgröße definieren, Text In Gr0ßbuchstabe, remoove underline on list element,list Symbole (Punkte entfernen)  */
+
+a {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-.menu li {
-    position: relative;
+ul {
+    list-style: none;
 }
 
-.menu a {
+
+/* Menu stylen*/
+
+nav ul li {
     color: #fff;
-    display: block;
-    padding: 10px 1.5rem;
+    margin: 15px;
+    padding: 5px;
 }
 
-.sub-menu a:hover {
-    background-color: #f34949;
-    color: #fff;
+nav ul li:hover {
+    color: #7FFF00;
+}
+
+nav ul {
+    display: inline-flex;
 }
 
 
-/* sub menu stylen */
+/* unter-menu stylen*/
 
 .sub-menu {
-    position: absolute;
-    background-color: #2c3e56;
-    width: 140px;
-    left: 0;
     display: none;
-}
-
-.sub-menu li {
-    display: inline-block;
+    padding: 5px;
 }
 
 .menu li:hover .sub-menu {
     display: block;
+    position: absolute;
+}
+
+.sub-menu li {
+    margin: 0;
+}
+
+.sub-menu li a {
+    color: #FFA500;
+}
+
+.sub-menu li a:hover {
+    color: #7FFF00;
+    border: 1px solid #fff;
+    border-radius: 5px;
 }

@@ -24,3 +24,18 @@ Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
 #sendform:hover {
     background-color: #ADFF2F;
 }
+
+
+/* required hervorheben */
+
+.req::after {
+    content: '*';
+    color: #CD5C5C;
+}
+
+
+/* Invalid und valid Input */
+
+input:invalid:hover {
+    border: 1px solid red;
+}
