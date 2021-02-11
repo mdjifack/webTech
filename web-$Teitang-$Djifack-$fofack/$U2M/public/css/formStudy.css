@@ -2,6 +2,19 @@
 Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
  */
 
-fieldset {
-    margin: 10px;
+.formstudy {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.textInput {
+    padding: 0.5em;
+}
+
+
+/* button stylen */
+
+.button {
+    padding-top: 3em;
 }

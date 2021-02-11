@@ -49,71 +49,69 @@
     <main>
         <div class="formstudy">
             <form action="ListeStudy.html" method="POST">
-                <fieldset class="first">
-                    <legend> Form</legend>
-                    <fieldset>
-                        <legend></legend>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required>
-                        <br>
-                        <label for="vorname">Vorname</label>
-                        <input type="text" id="vorname" required>
-                    </fieldset>
-
-                    <fieldset class="second">
-                        <legend></legend>
-                        <label for="schule">Hochschule/Universität</label>
-                        <select id="schule">
-                              <option value="Bitte-waehlen">Bitte auswaehlen</option>
-                              <option value="FH-Dortmund">FH-Dortmund</option>
-                            <option value="TU-Dortmund">TU-Dortmund</option>
-                          </select>
-                        <br>
-                        <label for="fach">Fachbereich</label>
-                        <input type="text" id="fach" required>
-                        <br>
-                        <label for="studiengang">Studiengang</label>
-                        <input type="text" id="studiengang" required>
-                        <br>
-                        <label for="aktsemester">Aktuelles Semester</label>
-                        <select id="aktsemester">
+                <h3> Füllen Sie bitte das Formular, wenn sie gerne Hilfe an anderen Studenten bieten wollen! </h3>
+                <div class="textInput">
+                    <input type="text" id="name" placeholder="name" required>
+                </div>
+                <div class="textInput">
+                    <input type="text" id="vorname" placeholder="vorname">
+                </div>
+                <div class="textInput">
+                    <label for="semester">In Welche Semester haben Sie das Modul abgelegt?</label>
+                    <br>
+                    <select id="schule">
+                        <option value="Bitte-waehlen">Bitte auswaehlen</option>
+                        <option value="FH-Dortmund">FH-Dortmund</option>
+                        <option value="TU-Dortmund">TU-Dortmund</option>
+                    </select>
+                </div>
+                <div class="textInput">
+                    <input type="text" id="fach" placeholder="Fachbereich" required>
+                </div>
+                <div class="textInput">
+                    <input type="text" id="studiengang" placeholder="Studiengang" required>
+                </div>
+                <div class="textInput"></div>
+                <div class="textInput">
+                    <label for="aktsemester">In welche Semester sind Sie?</label>
+                    <br>
+                    <select id="aktsemester">
                             <option value="Bitte-waehlen">Bitte auswaehlen</option>
                             <option value="1.Sem">1.Sem</option>
-                          <option value="2.Sem">2.Sem</option>
-                          <option value="3.Sem">3.Sem</option>
-                          <option value="4.Sem">4.Sem</option>
-                          <option value="5.Sem">5.Sem</option>
-                          <option value="6.Sem">6.Sem</option>
-                          <option value="7.Sem">7.Sem</option>
-                          <option value="über">über</option>
-                        </select>
-                    </fieldset>
-
-                    <fieldset class="third">
-                        <legend></legend>
-                        <label for="module">Module</label>
-                        <input type="text" id="module" required>
-                        <br>
-                        <label for="note">Note</label>
-                        <input type="text" id="note">
-                        <br>
-                        <label for="semester">Semester (Abgelegt)</label>
-                        <select id="semester">
+                            <option value="2.Sem">2.Sem</option>
+                            <option value="3.Sem">3.Sem</option>
+                            <option value="4.Sem">4.Sem</option>
+                            <option value="5.Sem">5.Sem</option>
+                            <option value="6.Sem">6.Sem</option>
+                            <option value="7.Sem">7.Sem</option>
+                            <option value="über">über</option>
+                    </select>
+                </div>
+                <div class="textInput">
+                    <input type="text" id="module" placeholder="Module" required>
+                </div>
+                <div class="textInput">
+                    <input type="text" id="note" placeholder="Note">
+                </div>
+                <div class="textInput">
+                    <label for="semester">In Welche Semester haben Sie das Modul abgelegt?</label>
+                    <br>
+                    <select id="semester">
                         <option value="Bitte-waehlen">Bitte auswaehlen</option>
-                       <option value="1.Sem">1.Sem</option>
-                      <option value="2.Sem">2.Sem</option>
-                       <option value="3.Sem">3.Sem</option>
-                      <option value="4.Sem">4.Sem</option>
-                      <option value="5.Sem">5.Sem</option>
-                       <option value="6.Sem">6.Sem</option>
-                  </select>
-                        <br>
-                        <label for="literatur">Literaturverzeichnis</label>
-                        <input type="text" id="literatur">
-                    </fieldset>
+                        <option value="1.Sem">1.Sem</option>
+                        <option value="2.Sem">2.Sem</option>
+                        <option value="3.Sem">3.Sem</option>
+                        <option value="4.Sem">4.Sem</option>
+                        <option value="5.Sem">5.Sem</option>
+                        <option value="6.Sem">6.Sem</option>
+                    </select>
+                </div>
+                <div class="textInput">
+                    <input type="text" id="literatur" placeholder="Literatur die Sie empfehlen wollen">
+                </div>
+                <div class="button">
                     <input id="sendform" type="button" value="anlegen" onclick="btnAction()">
-                    <!-- <button type="button" onclick=saveData()> Anlegen</button> -->
-                </fieldset>
+                </div>
             </form>
         </div>
     </main>
