@@ -46,37 +46,68 @@ studyTable.push(stdThree);
 // display Student on StudyListe
 
 
-function table() {
-    let length = studyTable.length;
-    let k = 0;
-    while (k < length) {
-        let transitTable = [studyTable[k].name, studyTable[k].vorname, studyTable[k].fachbereich, studyTable[k].studiengang, studyTable[k].module, studyTable[k].hochschule];
-        var pos = 0;
-        for (var i = 0; i <= length; i++) {
-            // create a row
-            var tr = document.createElement("tr");
-            for (var j = 0; j < transitTable.length; j++) {
-                // create a cell
-                var td = document.createElement("td");
-                // add text on cell
-                if (pos === 0) {
-                    var a = document.createElement("a");
-                    a.href = "DetailsStudy.html";
-                    a.textContent = transitTable[pos];
-                    td.appendChild(a);
+// function table() {
+//     let length = studyTable.length;
+//     let k = 0;
+//     while (k < length) {
+//         let transitTable = [studyTable[k].name, studyTable[k].vorname, studyTable[k].fachbereich, studyTable[k].studiengang, studyTable[k].module, studyTable[k].hochschule];
+//         var pos = 0;
+//         for (var i = 0; i <= length; i++) {
+//             // create a row
+//             var tr = document.createElement("tr");
+//             for (var j = 0; j < transitTable.length; j++) {
+//                 // create a cell
+//                 var td = document.createElement("td");
+//                 // add text on cell
+//                 if (pos === 0) {
+//                     var a = document.createElement("a");
+//                     a.href = "DetailsStudy.html";
+//                     a.textContent = transitTable[pos];
+//                     td.appendChild(a);
 
-                } else {
+//                 } else {
 
-                    td.textContent = transitTable[pos];
-                }
-                pos++;
-                // connect the cell with the row
-                tr.appendChild(td);
-            }
-            // connect the row with the table
-            document.querySelector("tbody").appendChild(tr);
-        }
-        k++;
+//                     td.textContent = transitTable[pos];
+//                 }
+//                 pos++;
+//                 // connect the cell with the row
+//                 tr.appendChild(td);
+//             }
+//             // connect the row with the table
+//             document.querySelector("tbody").appendChild(tr);
+//         }
+//         k++;
+//     }
+// };
+// table();
+//details Seite Study dynamisch erzeugen
+
+function studyCard() {
+    let a = studyTable.length;
+    let b = 0;
+    while (b < a) {
+        let infoTable = [studyTable[b].name, studyTable[b].vorname, studyTable[b].hochschule, studyTable[b].fachbereich, studyTable[b].studiengang, studyTable[b].module];
+        // create  a box "<div class=box-feld>"
+        var divBox = document.createElement("div");
+        divBox.className = "box-feld";
+        // create Box Title
+        var h4 = document.createElement("h4");
+        var h5 = document.createElement("h5");
+        // create a element P
+        var p = document.createElement("p");
+        // Text einbinden mit jeweilige html element
+        h4.textContent = `${infoTable[0]},${infoTable[1]}.`;
+        h5.textContent = `${infoTable[2]}.`;
+        p.textContent = ` Hallo Zusammen, ich bin der Studierende ${infoTable[0]} und studiere ${infoTable[4]} an der ${infoTable[2]}. Ich biete in diesem Semester Hilfe an Studierende, die Problem bei ${infoTable[5]} haben. Wenn Ihre Studiengang: ${infoTable[4]} und Ihre Fachbereich ${infoTable[3]} entspricht, zögern Sie nicht, mich zu kontaktieren, wenn Sie an meinem Angebot interessiert sind.
+        `;
+
+        // Element zusammen binden und in document einfuegen
+        h5.appendChild(p);
+        h4.appendChild(h5);
+        divBox.appendChild(h4);
+        var wurze = document.getElementById("container-uebersicht");
+        wurze.appendChild(divBox);
+        b++;
     }
-};
-table();
+}
+studyCard();
