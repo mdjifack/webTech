@@ -1,0 +1,35 @@
+/* 
+Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
+ */
+
+
+/* Tabelle in center */
+
+#callTable {
+    padding: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    width: auto;
+    border-collapse: collapse;
+}
+
+#callTable thead {
+    background-color: #2c3e50;
+}
+
+table thead,
+table tbody {
+    box-shadow: 0 5px 20px #FFA500;
+    padding: 15px;
+}
+
+table a {
+    color: #000000;
+    font-weight: bolder;
+}
+
+tbody tr:hover {
+    background-color: #2c3e50;
+}
