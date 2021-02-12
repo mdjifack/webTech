@@ -50,7 +50,7 @@ function table() {
     let length = studyTable.length;
     let k = 0;
     while (k < length) {
-        let transitTable = [studyTable[k].name, studyTable[k].vorname, studyTable[k].fachbereich, studyTable[k].module];
+        let transitTable = [studyTable[k].name, studyTable[k].vorname, studyTable[k].fachbereich, studyTable[k].studiengang, studyTable[k].module, studyTable[k].hochschule];
         var pos = 0;
         for (var i = 0; i <= length; i++) {
             // create a row

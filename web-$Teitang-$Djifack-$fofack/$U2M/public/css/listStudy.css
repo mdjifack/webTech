@@ -2,17 +2,20 @@
 Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
  */
 
+main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10em;
+}
+
 
 /* Tabelle in center */
 
-#callTable {
-    padding: 100px;
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
-    text-align: center;
-    width: auto;
-    border-collapse: collapse;
+table {
+    margin: 1em;
+    padding: 0.5em;
 }
 
 #callTable thead {
@@ -22,7 +25,7 @@ Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
 table thead,
 table tbody {
     box-shadow: 0 5px 20px #FFA500;
-    padding: 15px;
+    ;
 }
 
 table a {

@@ -51,13 +51,13 @@
             <form action="ListeStudy.html" method="POST">
                 <h3> Füllen Sie bitte das Formular, wenn sie gerne Hilfe an anderen Studenten bieten wollen! </h3>
                 <div class="textInput req">
-                    <input type="text" id="name" placeholder="name" required>
+                    <input type="text" id="name" placeholder="name" autofocus required>
                 </div>
                 <div class="textInput">
                     <input type="text" id="vorname" placeholder="vorname">
                 </div>
                 <div class="textInput">
-                    <label for="semester">In Welche Semester haben Sie das Modul abgelegt?</label>
+                    <label for="semester">Wo Studieren Sie?</label>
                     <br>
                     <select id="schule">
                         <option value="Bitte-waehlen">Bitte auswaehlen</option>
@@ -87,13 +87,13 @@
                     </select>
                 </div>
                 <div class="textInput req">
-                    <input type="text" id="module" placeholder="Module" required>
+                    <input type="text" id="module" placeholder="Module,womit Sie helfen." required>
                 </div>
                 <div class="textInput">
-                    <input type="text" id="note" placeholder="Note">
+                    <input type="text" id="note" pattern="[1-4]{1}[.][0,3,7]{1}" placeholder="Note (Bsp.1.0/4.7)">
                 </div>
                 <div class="textInput">
-                    <label for="semester">In Welche Semester haben Sie das Modul abgelegt?</label>
+                    <label for="semester">In Welchem Semester haben Sie das Modul abgelegt?</label>
                     <br>
                     <select id="semester">
                         <option value="Bitte-waehlen">Bitte auswaehlen</option>
