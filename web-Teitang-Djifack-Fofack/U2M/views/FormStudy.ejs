@@ -1,0 +1,90 @@
+<!-- 
+
+  Datei wurde von: xxxxxxxxxxxxxxxxx fertig gestelt!
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title> FormStudy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/formstudy.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('header.ejs', {variant:'Formular für Study Helfer'}); %>
+        <main>
+            <div class="formstudy">
+                <form action="ListeStudy" method="POST">
+                    <h3> Füllen Sie bitte das Formular, wenn sie gerne Hilfe an anderen Studenten anbieten wollen! </h3>
+                    <div class="textInput req">
+                        <input type="text" id="name" placeholder="name" autofocus required>
+                    </div>
+                    <div class="textInput">
+                        <input type="text" id="vorname" placeholder="vorname">
+                    </div>
+                    <div class="textInput">
+                        <label for="semester">Wo Studieren Sie?</label>
+                        <br>
+                        <select id="schule">
+                        <option value="Bitte-waehlen">Bitte auswaehlen</option>
+                        <option value="FH-Dortmund">FH-Dortmund</option>
+                        <option value="TU-Dortmund">TU-Dortmund</option>
+                    </select>
+                    </div>
+                    <div class="textInput req">
+                        <input type="text" id="fach" placeholder="Fachbereich" required>
+                    </div>
+                    <div class="textInput req">
+                        <input type="text" id="studiengang" placeholder="Studiengang" required>
+                    </div>
+                    <div class="textInput">
+                        <label for="aktsemester">In welche Semester sind Sie?</label>
+                        <br>
+                        <select id="aktsemester">
+                            <option value="Bitte-waehlen">Bitte auswaehlen</option>
+                            <option value="1.Sem">1.Sem</option>
+                            <option value="2.Sem">2.Sem</option>
+                            <option value="3.Sem">3.Sem</option>
+                            <option value="4.Sem">4.Sem</option>
+                            <option value="5.Sem">5.Sem</option>
+                            <option value="6.Sem">6.Sem</option>
+                            <option value="7.Sem">7.Sem</option>
+                            <option value="über">über</option>
+                    </select>
+                    </div>
+                    <div class="textInput req">
+                        <input type="text" id="module" placeholder="Module,womit Sie helfen." required>
+                    </div>
+                    <div class="textInput">
+                        <input type="text" id="note" pattern="[1-4]{1}[.][0,3,7]{1}" placeholder="Note (Bsp.1.0/4.7)">
+                    </div>
+                    <div class="textInput">
+                        <label for="semester">In Welchem Semester haben Sie das Modul abgelegt?</label>
+                        <br>
+                        <select id="semester">
+                        <option value="Bitte-waehlen">Bitte auswaehlen</option>
+                        <option value="1.Sem">1.Sem</option>
+                        <option value="2.Sem">2.Sem</option>
+                        <option value="3.Sem">3.Sem</option>
+                        <option value="4.Sem">4.Sem</option>
+                        <option value="5.Sem">5.Sem</option>
+                        <option value="6.Sem">6.Sem</option>
+                    </select>
+                    </div>
+                    <div class="textInput">
+                        <input type="text" id="literatur" placeholder="Literatur (empfehlen)">
+                    </div>
+                    <div class="button">
+                        <input id="sendform" type="button" value="anlegen" onclick="btnAction()">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <%- include("footer.ejs") %>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!-- 
+
+  Datei wurde von: xxxxxxxxxxxxxxxxx fertig gestelt!
+ -->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title> FormStudy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/documentation.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('../U2M/views/header.ejs', {variant:'Documentation'}); %>
+        <main>
+            <ol>
+                <li>
+                    <h4>Beschreibung des Anwendungsszenarios</h4>
+
+                    <strong>U2M</strong> ist eine Online Bildung Platform. Diese abkürzung steht für <strong> übung macht den meister</strong> aber dahinter versteckt sich auch eine andere Bedeutung <strong>you to me</strong>.
+                    <p>
+                        Wir haben bemerkt, dass einige Studenten Schwierigkeiten in bestimmten Fächern haben. Deshalb wurde unsere Website nicht nur entwickelt, um intelligenten Studenten die Möglichkeit zu geben, ihr Wissen zu teilen, sondern auch, damit andere davon profitieren
+                        können.Und das ist genau das <strong>you to me Prinzip</strong>. Die platform hat drei Fachkonzepte :
+                    </p>
+                    <ul>
+                        <li>Student</li>
+                        <li>Gruppe</li>
+                        <li>Bibliothek</li>
+                    </ul>
+
+                    Der Fachkonzept <strong>Student</strong> ist für Menschen, die ihr Wissen anderen zur Verfügung stellen wollen reserviert.
+                    <strong>Die Gruppe</strong> enthält verschiedene Kategorien von Lernhilfen wie zum Beispiel Analyse, Webtechnologie usw. Die Bibliothek ist der ideale Ort für jede Studienhilfe, um Bücher vorzuschlagen. Die verschiedenen Fachkonzepte
+                    enthalten jeweils drei Webseiten. wie zum Beispiel auf der Seite "Formular für Study Helfer" kann jeder Student das Formular ausfüllen, um sich als Studienhilfe zu registrieren. Wenn Sie auf die Schaltfläche "Anlegen " klicken, gelangen
+                    Sie auf die Seite "Liste der Study Helfer", auf der Sie die verschiedenen Studienhilfen finden, die Ihnen helfen möchten. Wenn Sie eines der Studienhilfsmittel ausgewählt haben, werden Sie auf die Seite "Informationen über Study Helfer"
+                    weitergeleitet, die Informationen zu jedem Studienhilfsmittel enthält.
+
+                </li>
+                <li>
+                    <h4>Fachobjekte der Anwendung</h4>
+                    Textuelle Darstellung, ggf. ergänzt um ein UML-Klassendiagramm: Welche Fachobjekte sind in der Anwendung enthalten? Welche Attribute und Beziehungen besitzen die Fachobjekte?
+                </li>
+                <li>
+                    <h4>Beschreibung und Begründung der Implementierungsentscheidungen</h4>
+                    <ol>
+                        <li>
+                            <h4>Client</h4>
+                            <ol>
+                                <li>
+                                    <h4>Strukturierung der HTML-Seiten</h4>
+                                    Welche HTML-Seiten sind in der Anwendung enthalten? Wie kann zwischen den einzelnen HTML-Seiten navigiert werden? Falls semantiklose Elemente eingesetzt wurden: Warum wurden diese eingesetzt?
+
+                                </li>
+                                <li>
+                                    <h4>Layout</h4>
+                                    Wie ist das einheitliche Layout der Web-Anwendung aufgebaut? Welche CSSLayout-Mechanismen wurden eingesetzt und warum?</li>
+                                <li>
+                                    <h4>Responsivität</h4>Welche Breakpoints wurden definiert und welche Auswirkung haben sie auf das Layout? Welchem Zweck dienen die definierten Breakpoints im konkreten Anwendungsszenario (z.B. Zielendgeräte)?</li>
+
+                            </ol>
+                            <li>
+                                <h4>Server</h4>
+                                <ol>
+                                    <li>
+                                        <h4>Modulstruktur</h4>Wie und nach welchen Prinzipien wurden die Module der Server-Implementierung strukturiert?
+                                    </li>
+                                    <li>
+                                        <h4>Unterstützte URLs/Endpunkte</h4>Welche HTTP-Anfragen werden durch das Routing des Servers unterstützt? Beschreibung als Tabelle der Form:
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th> URL</th>
+                                                    <th>HTTP-Methode</th>
+                                                    <th>Aktion</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>/pruefungsliste</td>
+                                                    <td> GET</td>
+                                                    <td> Anzeige der Prüfungsliste</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/pruefung</td>
+                                                    <td> POST</td>
+                                                    <td> Neuanlage einer Prüfung</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                </ol>
+                            </li>
+
+                    </ol>
+                    </li>
+                    <li>
+                        <h4>Start der Anwendung</h4>
+                        Welche Schritte sind zum Start der Anwendung notwendig und unter welcher URL ist die Anwendung erreichbar?
+                    </li>
+                    <li>
+                        <h4>Autorenschaft der Quellcode-Dateien</h4>
+                        Welches Gruppenmitglied ist für welche Quellcode-Dateien verantwortlich? Beschreibung als Tabelle der Form:
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> Autorin (Name,Matrikelnr.)</th>
+                                    <th>Dateien</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fofack,Daniele (xxxxxxx)</td>
+                                    <td>
+                                        <ul>
+                                            <li>public/css/xxx.css</li>
+                                            <li>public/css/xxx.css</li>
+                                            <li>public/css/xxx.css</li>
+                                            <li>public/css/xxx.css</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Djifack,Michel Boris (7103963)</td>
+                                    <td>
+                                        <ul>
+                                            <li>public/css/documentation.css</li>
+                                            <li>doc/documentation</li>
+                                            <li>public/css/xxx.css</li>
+                                            <li>public/css/xxx.css</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+            </ol>
+
+        </main>
+        <%- include("../U2M/views/footer.ejs") %>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!-- 
+
+  Datei wurde von: xxxxxxxxxxxxxxxxx fertig gestelt!
+-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title> Information über Study Helfer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/listStudy.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('header.ejs', {variant:'Detailseite zu einem Study Helfer'}); %>
+        <main>
+            <div>
+                <p>
+                    Die folgenden Studenten bieten Ihnen in diesem Semester ihre Hilfe an.<br> Diese Seite gibt Ihnen die Möglichkeit, sich ein wenig mehr über sie zu informieren.<br> Klicken Sie auf den Namen einen Student(in), der(die) Sie interessiert,
+                    um seiner Lerngruppe beizutreten.
+                </p>
+            </div>
+            <div id="container-uebersicht">
+                <!-- hier werden wir kleine Visit Karten für Studenten erzeugen -->
+                <% for (let r of studyTable) { %>
+
+                    <div class="box-feld">
+                        <h4>
+                            <%=r.name%>
+                        </h4>
+                        <!--<h5><%=r.hochschule%></h5>-->
+                        <p>Hallo Zusammen, ich bin der Studierende
+                            <%=r.name%> und studiere
+                                <%=r.studiengang%>
+                                    an der
+                                    <%=r.hochschule%>. Ich biete in diesem Semester Hilfe an Studierende, die Problem bei
+                                        <%=r.module%> haben. Wenn Ihre Studiengang:
+                                            <%=r.studiengang%> und Ihre Fachbereich
+                                                <%=r.fachbereich%> entspricht, zögern Sie nicht, mich zu kontaktieren, wenn Sie an meinem Angebot interessiert sind.</p>
+                    </div>
+
+
+                    <% }%>
+            </div>
+        </main>
+        <%- include("footer.ejs") %>
+</body>
+
+</html>
