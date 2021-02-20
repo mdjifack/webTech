@@ -26,11 +26,13 @@
                 <!-- hier werden wir kleine Visit Karten für Studenten erzeugen -->
                 <% for (let r of studyTable) { %>
 
-                    <div class="box-feld">
+                    <div class="box-feld" id=<%=r.name%>>
                         <h4>
                             <%=r.name%>
                         </h4>
-                        <!--<h5><%=r.hochschule%></h5>-->
+                        <h5>
+                            <%=r.hochschule%>
+                        </h5>
                         <p>Hallo Zusammen, ich bin der Studierende
                             <%=r.name%> und studiere
                                 <%=r.studiengang%>

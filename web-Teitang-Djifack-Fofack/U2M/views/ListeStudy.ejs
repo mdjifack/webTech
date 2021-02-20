@@ -33,7 +33,9 @@
                     <% for (let elem of studyTable) { %>
                         <tr>
                             <td>
-                                <%=elem.name%>
+                                <a href="DetailsStudy#<%=elem.name%>">
+                                    <%=elem.name%>
+                                </a>
                             </td>
                             <td>
                                 <%=elem.vorname%>
