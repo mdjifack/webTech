@@ -34,5 +34,6 @@ studyTable.push(stdSix);
 
 // export das Modul
 module.exports = {
-    studyTable: studyTable
+    studyTable: studyTable,
+    Study: Study
 }

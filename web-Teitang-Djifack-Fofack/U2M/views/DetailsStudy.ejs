@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <%- include('header.ejs', {variant:'Detailseite zu einem Study Helfer'}); %>
+    <%-include('header.ejs', {variant:'Detailseite zu einem Study Helfer'}); %>
         <main>
             <div>
                 <p>
@@ -24,7 +24,7 @@
             </div>
             <div id="container-uebersicht">
                 <!-- hier werden wir kleine Visit Karten für Studenten erzeugen -->
-                <% for (let r of studyTable) { %>
+                <%for (let r of studyTable) { %>
 
                     <div class="box-feld" id=<%=r.name%>>
                         <h4>

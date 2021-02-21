@@ -21,30 +21,30 @@
                 <form action="ListeStudy" method="POST">
                     <h3> Füllen Sie bitte das Formular, wenn sie gerne Hilfe an anderen Studenten anbieten wollen! </h3>
                     <div class="textInput req">
-                        <input type="text" id="name" placeholder="name" autofocus required>
+                        <input type="text" name="name" id="name" placeholder="name" autofocus required>
                     </div>
                     <div class="textInput">
-                        <input type="text" id="vorname" placeholder="vorname">
+                        <input type="text" name="vorname" id="vorname" placeholder="vorname">
                     </div>
                     <div class="textInput">
                         <label for="semester">Wo Studieren Sie?</label>
                         <br>
-                        <select id="schule">
+                        <select id="schule" name="schule">
                         <option value="Bitte-waehlen">Bitte auswaehlen</option>
                         <option value="FH-Dortmund">FH-Dortmund</option>
                         <option value="TU-Dortmund">TU-Dortmund</option>
                     </select>
                     </div>
                     <div class="textInput req">
-                        <input type="text" id="fach" placeholder="Fachbereich" required>
+                        <input type="text" name="fach" id="fach" placeholder="Fachbereich" required>
                     </div>
                     <div class="textInput req">
-                        <input type="text" id="studiengang" placeholder="Studiengang" required>
+                        <input type="text" name="studiengang" id="studiengang" placeholder="Studiengang" required>
                     </div>
                     <div class="textInput">
                         <label for="aktsemester">In welche Semester sind Sie?</label>
                         <br>
-                        <select id="aktsemester">
+                        <select id="aktsemester" name="aktsemester">
                             <option value="Bitte-waehlen">Bitte auswaehlen</option>
                             <option value="1.Sem">1.Sem</option>
                             <option value="2.Sem">2.Sem</option>
@@ -57,15 +57,15 @@
                     </select>
                     </div>
                     <div class="textInput req">
-                        <input type="text" id="module" placeholder="Module,womit Sie helfen." required>
+                        <input type="text" name="module" id="module" placeholder="Module,womit Sie helfen." required>
                     </div>
                     <div class="textInput">
-                        <input type="text" id="note" pattern="[1-4]{1}[.][0,3,7]{1}" placeholder="Note (Bsp.1.0/4.7)">
+                        <input type="text" name="note" id="note" pattern="[1-4]{1}[.][0,3,7]{1}" placeholder="Note (Bsp.1.0/4.7)">
                     </div>
                     <div class="textInput">
                         <label for="semester">In Welchem Semester haben Sie das Modul abgelegt?</label>
                         <br>
-                        <select id="semester">
+                        <select id="semester" name="semester">
                         <option value="Bitte-waehlen">Bitte auswaehlen</option>
                         <option value="1.Sem">1.Sem</option>
                         <option value="2.Sem">2.Sem</option>
@@ -79,12 +79,13 @@
                         <input type="text" id="literatur" placeholder="Literatur (empfehlen)">
                     </div>
                     <div class="button">
-                        <input id="sendform" type="button" value="anlegen" onclick="btnAction()">
+                        <input id="sendform" type="submit" value="anlegen">
                     </div>
                 </form>
             </div>
         </main>
         <%- include("footer.ejs") %>
+            <script src="js/studyForm.js"></script>
 </body>
 
 </html>
