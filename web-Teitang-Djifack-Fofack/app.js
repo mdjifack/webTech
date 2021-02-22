@@ -26,7 +26,7 @@ app.post("/ListeStudy",
         studArray.push(StudyOject.Study);
     });
 
-    app.post("/ListeGroup",
+app.post("/ListeGroup",
     function(req, res, next) {
         // Zugriff auf die Daten erfolgt
         // über "req.body"

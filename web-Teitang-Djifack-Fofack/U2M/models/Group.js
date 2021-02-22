@@ -3,7 +3,7 @@
  * 
  * 
  */
-function Group(GruppeName, AdminName, ModulleZiel, GruppenRaum, GruppenLink, Anfangsdatum, Endsdatum, AnzahlTeilnehmer){
+function Group(GruppeName, AdminName, ModulleZiel, GruppenRaum, GruppenLink, Anfangsdatum, Endsdatum, AnzahlTeilnehmer) {
     this.GruppeName = GruppeName;
     this.AdminName = AdminName;
     this.ModulleZiel = ModulleZiel;
