@@ -32,7 +32,7 @@ router.get("/ListeGroup", function(req, res) {
     res.render("ListeGroup", { group: group});
 });
 router.get("/DetailsGroup", function(req, res) {
-    res.render("DetailsGroup");
+    res.render("DetailsGroup", { group: group});
 });
 router.get("*", function(req, res, next) {
     res.render("404");

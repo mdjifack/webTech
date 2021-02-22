@@ -10,7 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/listStudy.css" rel="stylesheet">
+    <link href="css/Detailsgroup.css" rel="stylesheet">
+    <!-- <link href="css/listStudy.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -24,23 +25,26 @@
             </div>
             <div id="container-uebersicht">
                 <!-- hier werden wir kleine Visit Karten für Studenten erzeugen -->
-                <%for (let r of studyTable) { %>
+                <%for (let g of group) { %>
 
-                    <div class="box-feld" id=<%=r.name%>>
-                        <h4>
-                            <%=r.name%>
-                        </h4>
-                        <h5>
-                            <%=r.hochschule%>
-                        </h5>
-                        <p>Hallo Zusammen, ich bin der Studierende
-                            <%=r.name%> und studiere
-                                <%=r.studiengang%>
-                                    an der
-                                    <%=r.hochschule%>. Ich biete in diesem Semester Hilfe an Studierende, die Problem bei
-                                        <%=r.module%> haben. Wenn Ihre Studiengang:
-                                            <%=r.studiengang%> und Ihre Fachbereich
-                                                <%=r.fachbereich%> entspricht, zögern Sie nicht, mich zu kontaktieren, wenn Sie an meinem Angebot interessiert sind.</p>
+                    <div class="box-feld">
+                        <div class="color">
+                           <!-- color --> 
+                           place
+                        </div>
+                        <div>
+                            <h4>GruppeName: <%=g.GruppeName%></h4>
+                            <ul>
+                                <li>AdminName: <%=g.AdminName%></li>
+                                <li>ModulleZiel : <%=g.ModulleZiel %></li>
+                                <li>GruppenRaum: <%=g.GruppenRaum%></li>
+                                <li>GruppenLink: <%=g.GruppenLink%></li>
+                                <li>Anfangsdatum: <%=g.Anfangsdatum%></li>
+                                <li>Endsdatum: <%=g.Endsdatum%></li>
+                                <li>AnzahlTeilnehmer: <%=g.AnzahlTeilnehmer%></li>
+                            </ul>
+
+                        </div>
                     </div>
 
 
@@ -48,6 +52,7 @@
             </div>
         </main>
         <%- include("footer.ejs") %>
+        <script src="js/FormGroup.js"></script>
 </body>
 
 </html>
