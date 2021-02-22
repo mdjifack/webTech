@@ -26,7 +26,7 @@ app.post("/ListeStudy",
         studArray.push(StudyOject.Study);
     });
 
-    app.post("/ListeGroup",
+app.post("/ListeGroup",
     function(req, res, next) {
         // Zugriff auf die Daten erfolgt
         // über "req.body"
@@ -46,5 +46,5 @@ app.use(express.static("./U2M/public"));
 app.use(router);
 
 app.listen(8040, function() {
-    console.log("IClick on the following link to start our App: http://localHost:8040");
+    console.log("Click on the following link to start our App: http://localHost:8040");
 });
