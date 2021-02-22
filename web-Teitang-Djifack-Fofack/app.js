@@ -7,8 +7,11 @@ const express = require("express");
 const app = express();
 // path bis zum studytable 
 const studyClass = require("./U2M/models/modFormStudy.js");
+const group = require("./U2M/models/Group.js");
 const StudyOject = studyClass.Study;
 const studArray = studyClass.studyTable;
+const groupOject = group.Group;
+const groupArray = group.GroupTable;
 
 // Modul einbinden und Anfrage lesen
 const bodyParser = require("body-parser");
@@ -21,6 +24,14 @@ app.post("/ListeStudy",
         // über "req.body"
         StudyOject.Study = new StudyOject(req.body.name, req.body.vorname, req.body.schule, req.body.fach, req.body.studiengang, req.body.aktsemester, req.body.module, req.body.note, req.body.semester);
         studArray.push(StudyOject.Study);
+    });
+
+    app.post("/ListeGroup",
+    function(req, res, next) {
+        // Zugriff auf die Daten erfolgt
+        // über "req.body"
+        groupOject.Group = new groupOject(req.body.GruppeName, req.body.AdminName, req.body.ModulleZiel, req.body.GruppenRaum, req.body.GruppenLink, req.body.resdate, req.body.resdate1, req.body.max);
+        groupArray.push(groupOject.Group);
     });
 
 

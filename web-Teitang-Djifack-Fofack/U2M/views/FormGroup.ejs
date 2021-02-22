@@ -1,0 +1,73 @@
+<!-- 
+
+  Datei wurde von: xxxxxxxxxxxxxxxxx fertig gestelt!
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title> FormGroup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/formstudy.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('header.ejs', {variant:'Gruppe erstellen'}); %>
+        <main>
+            <div class="formstudy">
+                <form action="ListeGroup" method="POST">
+                    <h3> Füllen Sie bitte das Formular, um eine Gruppe zu erstellen </h3>
+                    <div class="textInput req">
+                        <input type="text" name="GruppeName" id="name" placeholder="GruppeName" autofocus required>
+                    </div>
+                    <div class="textInput">
+                        <input type="text" name="AdminName" id="vorname" placeholder="AdminName">
+                    </div>
+                    <div class="textInput req">
+                        <input type="text" name="ModulleZiel" id="fach" placeholder="ModulleZiel" required>
+                    </div>
+                    <div class="textInput req">
+                        <input type="text" name="max" id="studiengang" placeholder="MaxAnzahlTeilnehmer" required>
+                    </div>
+                    <div class="textInput req">
+                        <input type="text" name="min" id="module" placeholder="MinAnzahlTeilnehmer" required>
+                    </div>
+                    <div class="textInput">
+                        <input type="text" name="GruppenRaum" id="GruppenRaum"  placeholder="GruppenRaum">
+                    </div>
+                    <div class="textInput">
+                        <input type="text" name="GruppenLink" id="GruppenLink" placeholder="GruppenLink">
+                    </div>
+                    <div class="textInput">
+                        <label>
+                         Von <input type="date" id="datum" name="resdate"   required> 
+                       </label>
+                    </div>
+                    <div class="textInput">
+                        <label>
+                            Bis <input type="date" id="datums" name="resdate1"   required> 
+                          </label>
+                    </div>   
+                    
+                    <div class="textInput">
+                        <label for="start" class="req-form"> Startzeit:</label>
+                                    <input type="time" id="start" name="resstart" required min="08:30" max="21:00">
+                                    
+                    </div>
+                    <div class="textInput">
+                                    <label for="end" class="req-form"> Endezeit:</label>
+                                    <input type="time" id="end" name="resend" required max="22:00">
+                    </div>
+                    <div class="button">
+                        <input id="sendform" type="submit" value="anlegen">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <%- include("footer.ejs") %>
+</body>
+
+</html>
