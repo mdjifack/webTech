@@ -1,0 +1,107 @@
+/* Datei wurde von: Michel Djifack fertig gestelt! 
+ *
+ */
+
+
+/* Abschnitt am Anfang zentrieren */
+
+main p {
+    text-align: center;
+}
+
+
+/* leerzeichnen zwischen jeder div element (nur in formular)*/
+
+.book,
+.formContainer {
+    margin: 1em;
+}
+
+
+/* horizontal linie stylen  */
+
+#separateLine {
+    width: 30em;
+    border: 1px solid #FFA500;
+}
+
+
+/* Formular block one stylen */
+
+#personDatten {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+
+/* Formular block two stylen */
+
+#buchDaten {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+
+/* input titel stylen */
+
+input {
+    width: 300px;
+}
+
+select {
+    width: 300px;
+}
+
+label:hover {
+    color: #FFA500;
+}
+
+
+/* Button stylen */
+
+.button {
+    margin: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#sendform {
+    background-color: #ADFF2F;
+}
+
+#sendform:hover {
+    background-color: #FFA500;
+}
+
+
+/* Breakpoint erstellen */
+
+@media screen and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+    #page-title {
+        margin-top: 60px;
+        margin-left: 100px;
+        color: #FFA500;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #logo {
+        display: none;
+    }
+}
+
+
+/* required hervorheben */
+
+.req::after {
+    content: '*';
+    color: #CD5C5C;
+}

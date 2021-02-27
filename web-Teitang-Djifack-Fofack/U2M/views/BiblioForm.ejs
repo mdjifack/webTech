@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/BiblioForm.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,58 +20,59 @@
                 zu einem von einem Studenten vorgeschlagenen Buch suchen, klicken Sie <a href="BiblioListe">hier</a>.
             </p>
             <div class="formContainer">
-                <div class="book">
-                    <input type="text" name="bookTitel" id="titel" placeholder="Titel">
-                </div>
-                <div class="book">
-                    <label for="autor">Autor(en) Bsp: vorname-Nachname, vorname-Nachname, usw.</label>
-                    <br>
-                    <input type="text" id="autor" name="autor">
-                </div>
-                <div class="book">
-                    <label>Tragen Sie bitte das Erscheinungsjahr</label>
-                    <br>
-                    <input type="date">
-                </div>
-                <div class="book">
-                    <label for="uni">Wo befindet sich das Buch ?</label>
-                    <br>
-                    <select id="uni" name="uni">
-                        <option value="Bitte-waehlen">Bitte auswaehlen</option>
-                        <option value="FH-Dortmund">FH-Dortmund</option>
-                        <option value="TU-Dortmund">TU-Dortmund</option>
-                  </select>
-                </div>
-                <div class="book">
-                    <label for="uniBib">In welche Bibliothek ist das buch gelagert ?</label>
-                    <br>
-                    <select id="uniBib" name="uniBib">
-                        <option value="Bitte-waehlen">Bitte auswaehlen</option>
-                        <option value="FH-Dortmund-Sonnenstraße">FH-Dortmund</option>
-                        <option value="FH-Dortmund-Emill-figge-Str">TU-Dortmund</option>
-                        <option value="TU-Dortmund-Zentralbibliothek">FH-Dortmund</option>
-                        <option value="TU-Dortmund-Campus-Sud">TU-Dortmund</option>
-                  </select>
-                </div>
-                <div class="book">
-                    <label for="place">Wo befindet sich das Buch genau bitte?</label>
-                    <br>
-                    <input type="text" id="place" name="place" placeholder="C.1756">
-                </div>
-                <div class="book">
-                    <label for="url">Tragen Sie bitte eine Url, wenn das Buch in Forn eines Media ist </label>
-                    <br>
-                    <input type="text" id="url">
-                </div>
-                <div class="book">
-                    <input type="text" placeholder="ISBN:345-656-5i55">
-                </div>
-                <div class="book">
-                    <input type="text" placeholder="DOI:345-656-5i55">
-                </div>
-                <div class="book">
-                    <input type="text" placeholder="Verlag">
-                </div>
+                <form action="ListeStudy" method="POST">
+                    <div id="personDatten">
+                        <h4> Bitte geben Sie hier Ihre persönlichen Daten ein!</h4>
+                        <div class="book req">
+                            <input type="text" name="name" id="name" placeholder="name" autofocus required>
+                        </div>
+                        <div class="book">
+                            <input type="text" name="vorname" id="vorname" placeholder="vorname">
+                        </div>
+                        <div class="book req">
+                            <label for="schule">Wo Studieren Sie?</label>
+                            <br>
+                            <select id="schule" name="schule" class="req" required>
+                            <option value="">Bitte auswaehlen</option>
+                            <option value="FH-Dortmund">FH-Dortmund</option>
+                            <option value="TU-Dortmund">TU-Dortmund</option>
+                        </select>
+                        </div>
+                    </div>
+                    <hr id="separateLine">
+                    <div id="buchDaten">
+                        <h4> Informationen über das Buch!</h4>
+                        <div class="book req">
+                            <label for="titel"> Titel</label> <br>
+                            <input type="text" id="titel" name="titel" required>
+                        </div>
+                        <div class="book">
+                            <label for="autor"> Autor(en)</label> <br>
+                            <input type="text" id="autor" name="autor" placeholder="Bsp:Albert camus, Karl Muster">
+                        </div>
+                        <div class="book req">
+                            <label for="isbn"> ISBN/DOI</label><br>
+                            <input type="text" id="isbn" name="isbn" required>
+                        </div>
+                        <div class="book req">
+                            <label for="uni">Wo befindet sich das Buch ?</label><br>
+                            <select id="uni" name="uni" class="req" required>
+                                    <option value="">Bitte auswaehlen</option>
+                                    <option value="[FH-Dortmund] Emiil-Figge Str" >[FH-Dortmund] Emiil-Figge Str</option>
+                                    <option value="[TU-Dortmund] Zentrall-Bibliothek">[TU-Dortmund] Zentrall-Bibliothek</option>
+                                    <option value="[FH-Dortmund] SonnenStr">[FH-Dortmund] SonnenStr</option>
+                                    <option value="[TU-Dortmund] Asta-Campus-Süd">[TU-Dortmund] Asta-Campus-Süd</option>
+                            </select>
+                        </div>
+                        <div class="book req">
+                            <label for="lageplanCode"> Lageplan Code</label><br>
+                            <input type="text" id="lageplanCode" name="lageplanCode" required>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input id="sendform" type="submit" value="Buch anlegen">
+                    </div>
+                </form>
             </div>
         </main>
         <%- include("footer.ejs") %>
