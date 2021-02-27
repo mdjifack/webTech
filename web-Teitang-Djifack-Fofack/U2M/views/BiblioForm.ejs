@@ -20,7 +20,7 @@
                 zu einem von einem Studenten vorgeschlagenen Buch suchen, klicken Sie <a href="BiblioListe">hier</a>.
             </p>
             <div class="formContainer">
-                <form action="ListeStudy" method="POST">
+                <form action="formbiblio" method="POST">
                     <div id="personDatten">
                         <h4> Bitte geben Sie hier Ihre persönlichen Daten ein!</h4>
                         <div class="book req">
@@ -46,13 +46,13 @@
                             <label for="titel"> Titel</label> <br>
                             <input type="text" id="titel" name="titel" required>
                         </div>
-                        <div class="book">
-                            <label for="autor"> Autor(en)</label> <br>
-                            <input type="text" id="autor" name="autor" placeholder="Bsp:Albert camus, Karl Muster">
-                        </div>
                         <div class="book req">
                             <label for="isbn"> ISBN/DOI</label><br>
                             <input type="text" id="isbn" name="isbn" required>
+                        </div>
+                        <div class="book">
+                            <label for="autor"> Autor(en)</label> <br>
+                            <input type="text" id="autor" name="autor" placeholder="Bsp:Albert camus, Karl Muster">
                         </div>
                         <div class="book req">
                             <label for="uni">Wo befindet sich das Buch ?</label><br>
@@ -65,8 +65,8 @@
                             </select>
                         </div>
                         <div class="book req">
-                            <label for="lageplanCode"> Lageplan Code</label><br>
-                            <input type="text" id="lageplanCode" name="lageplanCode" required>
+                            <label for="lageplanCode"> Lageplan/medienTyp</label><br>
+                            <input type="text" id="lageplanCode" name="lageplanCode" placeholder="F 86362/2 oder 'eBook' eintppen" required>
                         </div>
                     </div>
                     <div class="button">
