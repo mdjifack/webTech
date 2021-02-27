@@ -19,8 +19,7 @@
         <main>
             <div>
                 <p>
-                   Hier finden Sie verschiedene Informationen über die 
-                   verschiedene Gruppe. 
+                    Hier finden Sie verschiedene Informationen über die verschiedene Gruppe.
                 </p>
             </div>
             <div id="container-uebersicht">
@@ -28,20 +27,36 @@
                 <%for (let g of group) { %>
 
                     <div class="box-feld">
-                        <div class="color">
-                           <!-- color --> 
-                           place
+                        <div class="color" id=<%=g.name%>>
+                            <!-- color -->
+                            place
                         </div>
                         <div>
-                            <h4>GruppeName: <%=g.GruppeName%></h4>
+                            <h4>GruppeName:
+                                <%=g.GruppeName%>
+                            </h4>
                             <ul>
-                                <li>AdminName: <%=g.AdminName%></li>
-                                <li>ModulleZiel : <%=g.ModulleZiel %></li>
-                                <li>GruppenRaum: <%=g.GruppenRaum%></li>
-                                <li>GruppenLink: <%=g.GruppenLink%></li>
-                                <li>Anfangsdatum: <%=g.Anfangsdatum%></li>
-                                <li>Endsdatum: <%=g.Endsdatum%></li>
-                                <li>AnzahlTeilnehmer: <%=g.AnzahlTeilnehmer%></li>
+                                <li>AdminName:
+                                    <%=g.AdminName%>
+                                </li>
+                                <li>ModulleZiel :
+                                    <%=g.ModulleZiel %>
+                                </li>
+                                <li>GruppenRaum:
+                                    <%=g.GruppenRaum%>
+                                </li>
+                                <li>GruppenLink:
+                                    <%=g.GruppenLink%>
+                                </li>
+                                <li>Anfangsdatum:
+                                    <%=g.Anfangsdatum%>
+                                </li>
+                                <li>Endsdatum:
+                                    <%=g.Endsdatum%>
+                                </li>
+                                <li>AnzahlTeilnehmer:
+                                    <%=g.AnzahlTeilnehmer%>
+                                </li>
                             </ul>
 
                         </div>
@@ -52,7 +67,7 @@
             </div>
         </main>
         <%- include("footer.ejs") %>
-        <script src="js/FormGroup.js"></script>
+            <script src="js/FormGroup.js"></script>
 </body>
 
 </html>

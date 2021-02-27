@@ -29,11 +29,22 @@ router.get("/FormGroup", function(req, res) {
     res.render("FormGroup");
 });
 router.get("/ListeGroup", function(req, res) {
-    res.render("ListeGroup", { group: group});
+    res.render("ListeGroup", { group: group });
 });
 router.get("/DetailsGroup", function(req, res) {
-    res.render("DetailsGroup", { group: group});
+    res.render("DetailsGroup", { group: group });
 });
+// Bibliothek route 
+router.get("/BiblioForm", function(req, res) {
+    res.render("BiblioForm");
+});
+router.get("/BiblioListe", function(req, res) {
+    res.render("BiblioListe");
+});
+router.get("/BiblioDetails", function(req, res) {
+    res.render("BiblioDetails");
+});
+
 router.get("*", function(req, res, next) {
     res.render("404");
     next();

@@ -1,0 +1,79 @@
+<!-- 
+
+  Datei wurde von: Michel Djifack fertig gestelt!
+-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title> Formular-Bibliothek</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <%-include('header.ejs', {variant:'Formular-Bibliothek '}); %>
+        <main>
+            <p>Wenn sie eiAuf dieser Seite können Sie Informationen zu einem Buch bereitstellen. In der Universitätsbibliothek wird es von Studenten, die nach dem besten Buch zur Lösung eines bestimmten Problems suchen, leichter gefunden. Wenn Sie Referenzen
+                zu einem von einem Studenten vorgeschlagenen Buch suchen, klicken Sie <a href="BiblioListe">hier</a>.
+            </p>
+            <div class="formContainer">
+                <div class="book">
+                    <input type="text" name="bookTitel" id="titel" placeholder="Titel">
+                </div>
+                <div class="book">
+                    <label for="autor">Autor(en) Bsp: vorname-Nachname, vorname-Nachname, usw.</label>
+                    <br>
+                    <input type="text" id="autor" name="autor">
+                </div>
+                <div class="book">
+                    <label>Tragen Sie bitte das Erscheinungsjahr</label>
+                    <br>
+                    <input type="date">
+                </div>
+                <div class="book">
+                    <label for="uni">Wo befindet sich das Buch ?</label>
+                    <br>
+                    <select id="uni" name="uni">
+                        <option value="Bitte-waehlen">Bitte auswaehlen</option>
+                        <option value="FH-Dortmund">FH-Dortmund</option>
+                        <option value="TU-Dortmund">TU-Dortmund</option>
+                  </select>
+                </div>
+                <div class="book">
+                    <label for="uniBib">In welche Bibliothek ist das buch gelagert ?</label>
+                    <br>
+                    <select id="uniBib" name="uniBib">
+                        <option value="Bitte-waehlen">Bitte auswaehlen</option>
+                        <option value="FH-Dortmund-Sonnenstraße">FH-Dortmund</option>
+                        <option value="FH-Dortmund-Emill-figge-Str">TU-Dortmund</option>
+                        <option value="TU-Dortmund-Zentralbibliothek">FH-Dortmund</option>
+                        <option value="TU-Dortmund-Campus-Sud">TU-Dortmund</option>
+                  </select>
+                </div>
+                <div class="book">
+                    <label for="place">Wo befindet sich das Buch genau bitte?</label>
+                    <br>
+                    <input type="text" id="place" name="place" placeholder="C.1756">
+                </div>
+                <div class="book">
+                    <label for="url">Tragen Sie bitte eine Url, wenn das Buch in Forn eines Media ist </label>
+                    <br>
+                    <input type="text" id="url">
+                </div>
+                <div class="book">
+                    <input type="text" placeholder="ISBN:345-656-5i55">
+                </div>
+                <div class="book">
+                    <input type="text" placeholder="DOI:345-656-5i55">
+                </div>
+                <div class="book">
+                    <input type="text" placeholder="Verlag">
+                </div>
+            </div>
+        </main>
+        <%- include("footer.ejs") %>
+</body>
+
+</html>
