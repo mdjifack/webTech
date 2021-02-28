@@ -3,7 +3,7 @@
  * 
  * 
  */
-function Study(name, vorname, hochschule, fachbereich, studiengang, aktuelleSemester, module, note, semesterabgelegt) {
+function Study(vorname, name, hochschule, fachbereich, studiengang, aktuelleSemester, module, note, semesterabgelegt) {
     this.name = name;
     this.vorname = vorname;
     this.hochschule = hochschule;
