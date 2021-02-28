@@ -5,7 +5,7 @@
  */
 
 //  objekt person 
-function person(name, vorname, schule) {
+function person(vorname, name, schule) {
     this.name = name;
     this.vorname = vorname;
     this.schule = schule;
@@ -19,31 +19,45 @@ function book(titel, autor, isbn, ort, position) {
     this.ort = ort;
     this.position = position;
 }
-// personen erzeugen
-let persA = ("Albert", "Einstein", "FH-Dortmund");
-let persB = ("Bernard", "Foch", "TU-Dortmund");
-let persC = ("Bro", "Karl", "TU-Dortmund");
-
-// Bücher erzeugen
-let book1 = ("Grundlagen des NPL-Geschäftes", "Marcel Köchling; Christoph Schalast", "9783956470691", "[TU-Dortmund] Zentrall-Bibliothek", "F 86362/2");
-let book2 = ("Web-Engineering", "Maria Bielikova; Tommi Mikkonen; Cesare Pautasso; Maria Bielikova; Tommi Mikkonen; Cesare Pautasso", "9783030505776; 9783030505783", "[TU-Dortmund] Zentrall-Bibliothek", "eBook");
-let book3 = ("KI-Grundlagen", "Edlich, Stefan", "9783900000692", "[FH-Dortmund] Emill-Figge Str", "C 86362/2");
 
 // Daten in Array speichern
-let persArray = [];
-let bookArray = [];
+let persArray = new Array();
+let bookArray = new Array();
+
+// personen erzeugen
+let persA = new person("Albert", "Einstein", "FH-Dortmund");
+let persB = new person("Bernard", "Foch", "TU-Dortmund");
+let persC = new person("Bro", "Karl", "TU-Dortmund");
+let persD = new person("Rossi", "Dragui", "FH-Dortmund");
+let persE = new person("Paul", "Le Guen", "TU-Dortmund");
+let persF = new person("Jacky", "Dongmo", "FH-Dortmund");
+
+// Bücher erzeugen
+let book1 = new book("Grundlagen des NPL-Geschäftes", "Marcel Köchling';' Christoph Schalast", "9783956470691", "[TU-Dortmund] Zentrall-Bibliothek", "F 86362/2");
+let book2 = new book("Web-Engineering", "Maria Bielikova; Tommi Mikkonen ; Cesare Pautasso ; Maria Bielikova ; Tommi Mikkonen ; Cesare Pautasso", "9783030505776 ; 9783030505783", "[TU-Dortmund] Zentrall-Bibliothek", "eBook");
+let book3 = new book("KI-Grundlagen", "Edlich ',' Stefan", "9783900000692", "[FH-Dortmund] Emill-Figge Str", "C 86362/2");
+let book4 = new book("KI-Grundlagen", "Edlich ',' Stefan", "9783900000692", "[FH-Dortmund] Emill-Figge Str", "C 86362/2");
+let book5 = new book("KI-Grundlagen", "Edlich ',' Stefan", "9783900000692", "[FH-Dortmund] Emill-Figge Str", "C 86362/2");
+let book6 = new book("KI-Grundlagen", "Edlich ',' Stefan", "9783900000692", "[FH-Dortmund] Emill-Figge Str", "C 86362/2");
+
+// Objekt im Array hinzufuegen
 persArray.push(persA);
 persArray.push(persB);
 persArray.push(persC);
+persArray.push(persD);
+persArray.push(persE);
+persArray.push(persF);
 bookArray.push(book1);
 bookArray.push(book2);
 bookArray.push(book3);
-
+bookArray.push(book4);
+bookArray.push(book3);
+bookArray.push(book6);
 
 // export das Modul
 module.exports = {
-    person: person,
-    book: book,
     persArray: persArray,
-    bookArray: bookArray
+    person: person,
+    bookArray: bookArray,
+    book: book
 }

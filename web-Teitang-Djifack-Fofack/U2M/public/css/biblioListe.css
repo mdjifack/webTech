@@ -1,0 +1,61 @@
+ /* Datei wurde von: Michel Djifack fertig gestelt! 
+ *
+ */
+ 
+ .bibTable thead {
+     background-color: #98FB98;
+     color: #000000;
+ }
+ 
+ table thead,
+ table tbody {
+     box-shadow: 0 5px 20px #FFA500;
+ }
+ 
+ table a {
+     color: #000000;
+     font-weight: bolder;
+ }
+ 
+ tbody tr:hover {
+     background-color: #FFA500;
+     color: #000000;
+ }
+ /* leerzeichnen */
+ 
+ table {
+     margin: 1em;
+ }
+ 
+ main {
+     display: flex;
+     flex-flow: row wrap;
+     padding: 10px;
+     margin: 5px;
+     justify-content: center;
+     min-height: 30em;
+ }
+ /* Breakpoint erstellen */
+ 
+ @media screen and (max-width: 700px) {
+     footer {
+         display: none;
+     }
+     #page-title {
+         margin-top: 60px;
+         margin-left: 100px;
+         color: #FFA500;
+     }
+ }
+ 
+ @media screen and (max-width: 300px) {
+     #logo,
+     footer,
+     header {
+         display: none;
+     }
+ }
+ 
+ table a:hover {
+     color: #FFA500;
+ }

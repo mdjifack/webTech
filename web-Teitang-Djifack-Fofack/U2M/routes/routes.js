@@ -4,6 +4,10 @@ const card1 = require("../models/Group.js");
 const studyTable = card.studyTable;
 const group = card1.GroupTable;
 const router = express.Router();
+// bibliothek einbinden
+const pfad = require("../models/biblio.js");
+const persArray = pfad.persArray;
+const bookArray = pfad.bookArray;
 
 /* 
  *Routen auf der Router-Instanz definieren
@@ -39,8 +43,9 @@ router.get("/BiblioForm", function(req, res) {
     res.render("BiblioForm");
 });
 router.get("/BiblioListe", function(req, res) {
-    res.render("BiblioListe");
+    res.render("BiblioListe", { persArray: persArray, bookArray: bookArray });
 });
+
 router.get("/BiblioDetails", function(req, res) {
     res.render("BiblioDetails");
 });

@@ -10,12 +10,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/biblioListe.css" rel="stylesheet">
 </head>
 
 <body>
     <%-include('header.ejs', {variant:'Bibliothek-Liste'}); %>
         <main>
-
+            <%let i=0;%>
+                <% for (let elem of persArray) { %>
+                    <table class="bibTable">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <a href="DetailsStudy#<%=elem.name%>">
+                                        <%=elem.name%>
+                                    </a>,
+                                    <%=elem.vorname%> <br> Student(in) an der
+                                        <%=elem.schule%> empfehlt euch:
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    - Titel:
+                                    <%=bookArray[i].titel%> <br> - isbn:
+                                        <%=bookArray[i].isbn%><br> - Lageplan:
+                                            <%=bookArray[i].position%>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <% i++;%>
+                        <% } %>
         </main>
         <%- include("footer.ejs") %>
 </body>
