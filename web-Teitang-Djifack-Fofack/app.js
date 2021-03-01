@@ -13,8 +13,8 @@ const persObjekt = biblioPfad.person;
 const bookObjekt = biblioPfad.book;
 const groupOject = group.Group;
 const groupArray = group.GroupTable;
-const persTable = biblioPfad.persArray;
-const bookTable = biblioPfad.bookArray;
+const persArray = biblioPfad.persArray;
+const bookArray = biblioPfad.bookArray;
 
 // Modul einbinden und Anfrage lesen
 const bodyParser = require("body-parser");
@@ -22,31 +22,34 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // save formStudyData
 app.post("/ListeStudy",
-    function(req) {
+    function(req, res) {
         // Zugriff auf die Daten erfolgt
         // über "req.body"
-        StudyOject.Study = new StudyOject(req.body.name, req.body.vorname, req.body.schule, req.body.fach, req.body.studiengang, req.body.aktsemester, req.body.module, req.body.note, req.body.semester);
+        StudyOject.Study = new StudyOject(req.body.vorname, req.body.name, req.body.schule, req.body.fach, req.body.studiengang, req.body.aktsemester, req.body.module, req.body.note, req.body.semester);
         studArray.push(StudyOject.Study);
+        res.redirect('ListeStudy');
     });
 
 // save Gruppe Data (Formular)
 app.post("/ListeGroup",
-    function(req) {
+    function(req, res) {
         // Zugriff auf die Daten erfolgt
         // über "req.body"
         groupOject.Group = new groupOject(req.body.GruppeName, req.body.AdminName, req.body.ModulleZiel, req.body.GruppenRaum, req.body.GruppenLink, req.body.resdate, req.body.resdate1, req.body.max);
         groupArray.push(groupOject.Group);
+        res.redirect('ListeGroup');
     });
 
 // save Biblio Data (Formular)
 app.post("/BiblioListe",
-        function(req) {
+        function(req, res) {
             // Zugriff auf die Daten erfolgt
             // über "req.body"
-            persObjekt.person = new persObjekt(req.vorname, req.name, req.schule);
-            bookObjekt.book = new bookObjekt(req.titel, req.isbn, req.autor, req.uni, req.lageplanCode);
-            persTable.push(persObjekt.person);
-            bookTable.push(bookObjekt.book);
+            persObjekt.person = new persObjekt(req.body.vorname, req.body.name, req.body.schule);
+            persArray.push(persObjekt.person);
+            bookObjekt.book = new bookObjekt(req.body.titel, req.body.isbn, req.body.autor, req.body.uni, req.body.lageplanCode);
+            bookArray.push(bookObjekt.book);
+            res.redirect('BiblioListe');
         }
     )
     // Modul mit den Routen einbinden

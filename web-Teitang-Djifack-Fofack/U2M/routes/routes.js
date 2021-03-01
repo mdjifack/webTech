@@ -47,7 +47,7 @@ router.get("/BiblioListe", function(req, res) {
 });
 
 router.get("/BiblioDetails", function(req, res) {
-    res.render("BiblioDetails");
+    res.render("BiblioDetails", { persArray: persArray, bookArray: bookArray });
 });
 
 router.get("*", function(req, res, next) {

@@ -1,0 +1,23 @@
+/* Datei wurde von: Michel Djifack fertig gestelt! 
+ *
+ */
+
+
+/* Abschnitt am Anfang zentrieren */
+
+main p {
+    text-align: center;
+}
+
+
+/* horizontal linie stylen  */
+
+.line {
+    width: 30em;
+    border: 1px solid #FFA500;
+}
+
+.item:hover {
+    color: #000000;
+    text-shadow: 0 5px 20px #FFA500;
+}

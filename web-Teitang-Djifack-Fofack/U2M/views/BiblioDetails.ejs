@@ -10,12 +10,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/biblioDetails.css" rel="stylesheet">
 </head>
 
 <body>
     <%-include('header.ejs', {variant:'Bibliothek-Details'}); %>
         <main>
+            <%let i=0;%>
+                <% for (let elem of persArray) { %>
+                    <div class="item" id="<%=bookArray[i].isbn%>">
+                        <p>
+                            Hallo Zusammen, <br>
+                            <%=elem.name%>,
+                                <%=elem.vorname%> empfiehlt Ihnen, das folgende Buch zu besorgen.
 
+                        </p>
+                        <p>
+                            Titel:
+                            <%=bookArray[i].titel%><br> Autor(en):
+                                <%=bookArray[i].autor%><br> ISBN/DOI:
+                                    <%=bookArray[i].isbn%><br> lageplan:
+                                        <%=bookArray[i].position%><br> Ort:
+                                            <%=bookArray[i].ort%><br>
+                        </p>
+                    </div>
+                    <hr class="line">
+                    <% i++;%>
+                        <% } %>
         </main>
         <%- include("footer.ejs") %>
 </body>

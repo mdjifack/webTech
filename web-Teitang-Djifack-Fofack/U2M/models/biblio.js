@@ -51,7 +51,7 @@ bookArray.push(book1);
 bookArray.push(book2);
 bookArray.push(book3);
 bookArray.push(book4);
-bookArray.push(book3);
+bookArray.push(book5);
 bookArray.push(book6);
 
 // export das Modul
@@ -59,5 +59,5 @@ module.exports = {
     persArray: persArray,
     person: person,
     bookArray: bookArray,
-    book: book
+    book: book,
 }

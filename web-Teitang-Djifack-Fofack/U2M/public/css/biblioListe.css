@@ -33,6 +33,7 @@
      padding: 10px;
      margin: 5px;
      justify-content: center;
+     align-items: center;
      min-height: 30em;
  }
  /* Breakpoint erstellen */
@@ -57,5 +58,5 @@
  }
  
  table a:hover {
-     color: #FFA500;
+     color: #4169E1;
  }

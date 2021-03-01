@@ -20,7 +20,7 @@
                 zu einem von einem Studenten vorgeschlagenen Buch suchen, klicken Sie <a href="BiblioListe">hier</a>.
             </p>
             <div class="formContainer">
-                <form action="BiblioListe" method="POST">
+                <form action="BiblioListe" method="POST" id="formular">
                     <div id="personDatten">
                         <h4> Bitte geben Sie hier Ihre persönlichen Daten ein!</h4>
                         <div class="book req">
@@ -70,12 +70,13 @@
                         </div>
                     </div>
                     <div class="button">
-                        <input id="sendform" type="submit" value="Buch anlegen">
+                        <input id="sendform" value="Buch anlegen" type="submit">
                     </div>
                 </form>
             </div>
         </main>
         <%- include("footer.ejs") %>
+            <!-- <script src="../public//js//biblioForm.js"></script> -->
 </body>
 
 </html>
