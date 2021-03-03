@@ -2,3 +2,32 @@
     min-height: 5em;
     /*background-color: green;*/
 }
+.groupDetails{
+    display:grid;
+    background: #fff;
+    width: 30%;
+    height: 300px;
+    position:sticky;
+    border: dashed 10px #037CA9;
+    margin: auto auto;
+    padding: 20px;
+    transform: skew(-10deg);
+    box-shadow: 0 5px 20px goldenrod;
+}  
+
+.list{
+    list-style-type:square;
+}
+
+@media screen and (max-width: 800px) {
+    .groupDetails {
+        border: none;
+        box-shadow:none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .groupDetails {
+        justify-content: center;
+    }
+}

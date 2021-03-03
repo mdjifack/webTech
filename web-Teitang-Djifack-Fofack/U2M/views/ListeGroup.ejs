@@ -11,15 +11,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/listStudy.css" rel="stylesheet">
+    <link href="css/listGroup.css" rel="stylesheet">
 </head>
 
 <body>
     <%- include('header.ejs', {variant:'GruppeListe'}); %>
         <main>
             <p>Die folgende Tabelle gibt Ihnen Auskunft über die Gruppe.</p>
-            <p>Sie können auf den GruppeNamen, um weitere Informationen über die entspreschende Gruppe zu erhalten.</p>
-            <table id="callTable">
+            <p>Sie können auf den GruppeNamen, um weitere Informationen über die entspreschende Gruppe zu erhalten.</p> <br>
+           <!-- <table id="callTable">
                 <thead>
                     <tr>
                         <th>GruppeName</th>
@@ -66,7 +66,45 @@
                 </tbody>
                 <tbody>
                 </tbody>
-            </table>
+            </table>-->
+            <% for (let elem of group) { %>
+            <div id="container">
+           
+                <div id="head" ><h1><a href="DetailsStudy#<%=elem.name%>"><%=elem.GruppeName%></a></h1></div>
+                    <div id="navigation">
+                        <h2>
+                            
+                            <%=elem.AdminName%>
+                        </h2>
+                            
+                    </div>
+                    <div id="content">
+                        <h2>Inhalt</h2>
+                        <ul>
+                            <li>ModulleZiel :
+                                <%=elem.ModulleZiel %>
+                            </li>
+                            <li>GruppenRaum:
+                                <%=elem.GruppenRaum%>
+                            </li>
+                            <li>GruppenLink:
+                                <%=elem.GruppenLink%>
+                            </li>
+                            <li>Anfangsdatum:
+                                <%=elem.Anfangsdatum%>
+                            </li>
+                            <li>Endsdatum:
+                                <%=elem.Endsdatum%>
+                            </li>
+                            <li>AnzahlTeilnehmer:
+                                <%=elem.AnzahlTeilnehmer%>
+                            </li>
+                        </ul>
+                            
+                    </div>
+                   
+            </div>
+            <% } %>
         </main>
         <%- include("footer.ejs") %>
 </body>

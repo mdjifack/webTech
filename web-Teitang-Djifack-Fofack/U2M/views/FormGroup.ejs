@@ -21,55 +21,55 @@
                 <form action="ListeGroup" method="POST">
                     <h3> Füllen Sie bitte das Formular, um eine Gruppe zu erstellen </h3>
 
-                
-                        <input type="text" name="GruppeName" id="name" placeholder="GruppeName" autofocus required>
-                   
-                    
-                        <input type="text" name="AdminName" id="vorname" placeholder="AdminName">
-                   
-                        
-                        <input type="text" name="ModulleZiel" id="fach" placeholder="ModulleZiel" required>
-                   
-                     
-                        <input type="text" name="max" id="studiengang" placeholder="MaxAnzahlTeilnehmer" required>
-                    
-                       
-                        <input type="text" name="min" id="module" placeholder="MinAnzahlTeilnehmer" required>
-                   
-                        
-                        <input type="text" name="GruppenRaum" id="GruppenRaum"  placeholder="GruppenRaum">
-                       
 
-                      
-                        <input type="text" name="GruppenLink" id="GruppenLink" placeholder="GruppenLink">
-                    
-                   
-                        <label for="start" > Anfangsdatum:</label>
-                          <input type="date" id="datum" name="resdate"   required> 
-                       
-                    
-                    
-                          <label for="start" > Endedatum:</label>
-                             <input type="date" id="datums" name="resdate1"   required> 
-                         
-                   
-                    
-                    
-                        <label for="start" > Startzeit:</label>
-                        <input type="time" id="start" name="resstart" required min="08:30" max="21:00">
-                   
-                    
-                        <label for="end"> Endezeit:</label>
-                        <input type="time" id="end" name="resend" required max="22:00">
-                    
+                    <input type="text" name="GruppeName" id="name" placeholder="GruppeName" autofocus required>
+
+
+                    <input type="text" name="AdminName" id="vorname" placeholder="AdminName">
+
+
+                    <input type="text" name="ModulleZiel" id="fach" placeholder="ModulleZiel" required>
+
+
+                    <input type="text" name="max" id="studiengang" placeholder="MaxTeilnehmer" required>
+
+
+                    <input type="text" name="min" id="module" placeholder="MinTeilnehmer" required>
+
+
+                    <input type="text" name="GruppenRaum" id="GruppenRaum" placeholder="GruppenRaum">
+
+
+
+                    <input type="text" name="GruppenLink" id="GruppenLink" placeholder="GruppenLink">
+
+
+                    <label for="start"> Anfangsdatum:</label>
+                    <input type="date" id="datum" name="resdate" required>
+
+
+
+                    <label for="start"> Endedatum:</label>
+                    <input type="date" id="datums" name="resdate1" required>
+
+
+
+
+                    <label for="start"> Startzeit:</label>
+                    <input type="time" id="start" name="resstart" required min="08:30" max="21:00">
+
+
+                    <label for="end"> Endezeit:</label>
+                    <input type="time" id="end" name="resend" required max="22:00">
+
                     <div class="button">
                         <input id="sendform" type="submit" value="anlegen">
                     </div>
                 </form>
-            </div>   <!--<div class="textInput"></div>-->
+            </div>
+            <!--<div class="textInput"></div>-->
         </main>
         <%- include("footer.ejs") %>
-        <script src="js/FormGroup.js"></script>
 </body>
 
 </html>

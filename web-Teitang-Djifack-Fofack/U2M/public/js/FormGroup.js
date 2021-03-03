@@ -17,3 +17,4 @@ for(let g of table){
         color.style.backgroundColor = "red";
      }
 }
+
