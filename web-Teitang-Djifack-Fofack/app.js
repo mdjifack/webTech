@@ -47,7 +47,7 @@ app.post("/BiblioListe",
             // über "req.body"
             persObjekt.person = new persObjekt(req.body.vorname, req.body.name, req.body.schule);
             persArray.push(persObjekt.person);
-            bookObjekt.book = new bookObjekt(req.body.titel, req.body.isbn, req.body.autor, req.body.uni, req.body.lageplanCode);
+            bookObjekt.book = new bookObjekt(req.body.titel, req.body.autor, req.body.isbn, req.body.uni, req.body.lageplanCode);
             bookArray.push(bookObjekt.book);
             res.redirect('BiblioListe');
         }
