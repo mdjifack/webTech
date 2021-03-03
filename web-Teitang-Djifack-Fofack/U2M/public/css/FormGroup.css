@@ -6,8 +6,8 @@ form {
     border: 1px solid rgb(0, 0, 0);
     width: 20%;
     background-color: whitesmoke;
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 10px auto;
+    padding: 10px auto;
 }
 
 input
@@ -17,12 +17,11 @@ input
     padding: 4px;
     margin: 5px;
     border:1px solid gray;
-    /*outline: none; whitesmoke*/
     border-radius: 0.3em;
 } 
 
 form label {
-    display: block;
+   
     font-size: 0.8em;
     color: darkslategrey;
     padding-left: 3px;    
@@ -30,4 +29,14 @@ form label {
 input[type=submit]:hover {
     background-color:green;
     box-shadow: 2px 2px 2px gold;
+}
+@media screen and (max-width: 480px) {
+    form {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 300px) {
+    form {
+        width: 60%;
+    }
 }

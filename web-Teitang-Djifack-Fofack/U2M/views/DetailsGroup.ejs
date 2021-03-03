@@ -26,12 +26,9 @@
                 <!-- hier werden wir kleine Visit Karten für Studenten erzeugen -->
                 <%for (let g of group) { %>
 
-                    <div class="box-feld">
-                        <div class="color" id=<%=g.name%>>
-                            <!-- color -->
-                            place
-                        </div>
-                        <div>
+                <!--    <div class="box-feld">
+                          
+                         
                             <h4>GruppeName:
                                 <%=g.GruppeName%>
                             </h4>
@@ -58,16 +55,46 @@
                                     <%=g.AnzahlTeilnehmer%>
                                 </li>
                             </ul>
+                    </div>-->
+                    <div class="groupDetails">
+                
 
-                        </div>
+                         <h4>GruppeName:
+                            <%=g.GruppeName%>
+                        </h4>
+                        <ul class="list">
+                            <li>AdminName: <%=g.AdminName%>
+                                
+                            </li>
+                            <li>ModulleZiel : <%=g.ModulleZiel %>
+                                
+                            </li>
+                            <li>GruppenRaum: <%=g.GruppenRaum%>
+                                
+                            </li>
+                            <li>GruppenLink: <%=g.GruppenLink%>
+                                
+                            </li>
+                            <li>Anfangsdatum: <%=g.Anfangsdatum%>
+                                
+                            </li>
+                            <li>Endsdatum: <%=g.Endsdatum%>
+                                
+                            </li>
+                            <li>AnzahlTeilnehmer: <%=g.AnzahlTeilnehmer%>
+                                
+                            </li>
+                        </ul>
                     </div>
 
-
+                    
+                    <br>
                     <% }%>
+                   
             </div>
+           
         </main>
         <%- include("footer.ejs") %>
-            <script src="js/FormGroup.js"></script>
 </body>
 
 </html>
