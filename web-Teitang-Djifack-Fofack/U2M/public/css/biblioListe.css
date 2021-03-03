@@ -2,6 +2,10 @@
  *
  */
  
+ main p {
+     text-align: center;
+ }
+ 
  .bibTable thead {
      background-color: #98FB98;
      color: #000000;
@@ -27,13 +31,11 @@
      margin: 1em;
  }
  
- main {
-     display: flex;
-     flex-flow: row wrap;
+ #container {
+     display: grid;
+     grid-template-columns: 25% 50% 25%;
      padding: 10px;
      margin: 5px;
-     justify-content: center;
-     align-items: center;
      min-height: 30em;
  }
  /* Breakpoint erstellen */
@@ -59,4 +61,18 @@
  
  table a:hover {
      color: #4169E1;
+ }
+ 
+ @media screen and (max-width: 700px) {
+     #container {
+         display: grid;
+         grid-template-columns: 50% 50%;
+     }
+ }
+ 
+ @media screen and (max-width: 300px) {
+     #container {
+         display: grid;
+         grid-template-columns: auto;
+     }
  }

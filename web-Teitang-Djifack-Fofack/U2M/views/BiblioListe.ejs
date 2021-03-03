@@ -16,46 +16,51 @@
 <body>
     <%-include('header.ejs', {variant:'Bibliothek-Liste'}); %>
         <main>
-            <%let i=0;%>
-                <% for (let elem of persArray) { %>
-                    <table class="bibTable">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <a href="DetailsStudy#<%=elem.name%>">
-                                        <%=elem.name%>
-                                    </a>,
-                                    <%=elem.vorname%> <br> Student(in) an der
-                                        <%=elem.schule%> empfehlt euch: <br>
-                                            <a href="BiblioDetails#<%=bookArray[i].titel%>">
-                                                <%=bookArray[i].titel%> <br>
-                                            </a>
-                                            <p>
-                                                klicken Sie <a href="DetailsStudy#<%=elem.name%>">
+            <p>Auf dieser Seite wird Ihnen eine Liste mit empfohlenen Büchern zur Verfügung gestellt. <br> Wenn Sie auf den Namen des jeweiligen Kameraden klicken, der Ihnen das Buch zur Verfügung stellt, erhalten Sie Informationen über sein Profil.
+            </p>
+            <div id="container">
+
+                <%let i=0;%>
+                    <% for (let elem of persArray) { %>
+                        <table class="bibTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <a href="DetailsStudy#<%=elem.name%>">
+                                            <%=elem.name%>
+                                        </a>,
+                                        <%=elem.vorname%> <br> Student(in) an der
+                                            <%=elem.schule%> empfehlt euch: <br>
+                                                <a href="BiblioDetails#<%=bookArray[i].titel%>">
+                                                    <%=bookArray[i].titel%> <br>
+                                                </a>
+                                                <p>
+                                                    klicken Sie <a href="DetailsStudy#<%=elem.name%>">
                                                     hier
                                                 </a> für mehr infos über mich!
-                                            </p>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    - Titel:
-                                    <%=bookArray[i].titel%> <br> - isbn:
-                                        <%=bookArray[i].isbn%><br> - Lageplan:
-                                            <%=bookArray[i].position%>
-                                                <p>
-                                                    klicken Sie <a href="BiblioDetails#<%=bookArray[i].isbn%>">
+                                                </p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        - Titel:
+                                        <%=bookArray[i].titel%> <br> - isbn:
+                                            <%=bookArray[i].isbn%><br> - Lageplan:
+                                                <%=bookArray[i].position%>
+                                                    <p>
+                                                        klicken Sie <a href="BiblioDetails#<%=bookArray[i].isbn%>">
                                                     hier
                                                 </a> für mehr infos über das Buch!
-                                                </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <% i++;%>
-                        <% } %>
+                                                    </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <% i++;%>
+                            <% } %>
+            </div>
         </main>
         <%- include("footer.ejs") %>
 </body>

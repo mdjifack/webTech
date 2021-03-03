@@ -16,13 +16,17 @@
 <body>
     <%-include('header.ejs', {variant:'Bibliothek-Details'}); %>
         <main>
+            <p>Auf dieser Seite wird Ihnen eine Liste aller empfohlenen Büchern zur Verfügung gestellt. <br> Wenn Sie auf den Namen des jeweiligen Kameraden klicken, der Ihnen das Buch zur Verfügung stellt, erhalten Sie Informationen über seine Gruppe.
+            </p>
             <%let i=0;%>
                 <% for (let elem of persArray) { %>
                     <div class="item" id="<%=bookArray[i].isbn%>">
                         <p>
                             Hallo Zusammen, <br>
-                            <%=elem.name%>,
-                                <%=elem.vorname%> empfiehlt Ihnen, das folgende Buch zu besorgen.
+                            <a href="DetailsGroup#<%=elem.name%>">
+                                <%=elem.name%>,
+                                    <%=elem.vorname%>
+                            </a> empfiehlt Ihnen, das folgende Buch zu besorgen.
 
                         </p>
                         <p>
