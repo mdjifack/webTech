@@ -1,26 +1,42 @@
-/* *Datei wurde von: xxxxxxxxxxxxxxxxx fertig gestelt!
+/**
+ * Datei wurde von:
+ * @Danielle Fofack
+ * @Wilfried Teitang
+ * @Michel Djifack
+ * fertig gestelt!
  */
 
 const express = require("express");
 const app = express();
-// path bis zum study, group und Bibliothek
+
+
+/**
+ * path bis zum study, group und Bibliothek
+ */
+
+// @Danielle Fofack
 const studyClass = require("./U2M/models/modFormStudy.js");
-const group = require("./U2M/models/Group.js");
-const biblioPfad = require("./U2M/models/biblio.js")
 const StudyOject = studyClass.Study;
 const studArray = studyClass.studyTable;
-const persObjekt = biblioPfad.person;
-const bookObjekt = biblioPfad.book;
+
+// @Wilfried Teitang
+const group = require("./U2M/models/Group.js");
 const groupOject = group.Group;
 const groupArray = group.GroupTable;
+
+// @Michel Djifack
+const biblioPfad = require("./U2M/models/biblio.js")
 const persArray = biblioPfad.persArray;
 const bookArray = biblioPfad.bookArray;
+const persObjekt = biblioPfad.person;
+const bookObjekt = biblioPfad.book;
+
 
 // Modul einbinden und Anfrage lesen
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// save formStudyData
+//  @Danielle Fofack,  save formStudyData
 app.post("/ListeStudy",
     function(req, res) {
         // Zugriff auf die Daten erfolgt
@@ -30,7 +46,7 @@ app.post("/ListeStudy",
         res.redirect('ListeStudy');
     });
 
-// save Gruppe Data (Formular)
+// @Wilfried Teitang, save Gruppe Data (Formular)
 app.post("/ListeGroup",
     function(req, res) {
         // Zugriff auf die Daten erfolgt
@@ -40,21 +56,21 @@ app.post("/ListeGroup",
         res.redirect('ListeGroup');
     });
 
-// save Biblio Data (Formular)
+// @Michel Djifack, save Biblio Data (Formular): 
 app.post("/BiblioListe",
-        function(req, res) {
-            // Zugriff auf die Daten erfolgt
-            // über "req.body"
-            persObjekt.person = new persObjekt(req.body.vorname, req.body.name, req.body.schule);
-            persArray.push(persObjekt.person);
-            bookObjekt.book = new bookObjekt(req.body.titel, req.body.autor, req.body.isbn, req.body.uni, req.body.lageplanCode);
-            bookArray.push(bookObjekt.book);
-            res.redirect('BiblioListe');
-        }
-    )
-    // Modul mit den Routen einbinden
-const router = require("./U2M/routes/routes.js");
+    function(req, res) {
+        // Zugriff auf die Daten erfolgt
+        // über "req.body"
+        persObjekt.person = new persObjekt(req.body.vorname, req.body.name, req.body.schule);
+        persArray.push(persObjekt.person);
+        bookObjekt.book = new bookObjekt(req.body.titel, req.body.autor, req.body.isbn, req.body.uni, req.body.lageplanCode);
+        bookArray.push(bookObjekt.book);
+        res.redirect('BiblioListe');
+    }
+)
 
+// Modul mit den Routen einbinden
+const router = require("./U2M/routes/routes.js");
 
 app.set("views", "./U2M/views");
 app.set("view engine", "ejs");

@@ -1,18 +1,34 @@
+/**
+ * Datei wurde von:
+ * @Danielle Fofack
+ * @Wilfried Teitang
+ * @Michel Djifack
+ * fertig gestelt!
+ */
+
+
+
 const express = require("express");
-const card = require("../models/modFormStudy.js");
-const card1 = require("../models/Group.js");
-const studyTable = card.studyTable;
-const group = card1.GroupTable;
 const router = express.Router();
-// bibliothek einbinden
+
+// @Danielle Fofack
+const card = require("../models/modFormStudy.js");
+const studyTable = card.studyTable;
+
+// @Wilfried Teitang 
+const card1 = require("../models/Group.js");
+const group = card1.GroupTable;
+
+
+// @Michel Djifack, bibliothek einbinden
 const pfad = require("../models/biblio.js");
 const persArray = pfad.persArray;
 const bookArray = pfad.bookArray;
 
-/* 
- *Routen auf der Router-Instanz definieren
+/**
+ * @Danielle Fofack
+ * Routen auf der Router-Instanz definieren [Fachobjekt Study]
  */
-
 router.get("/", function(req, res) {
     res.render("../../doc/documentation");
 });
@@ -29,6 +45,11 @@ router.get("/ListeStudy", function(req, res) {
     res.render("ListeStudy", { studyTable: studyTable });
 });
 
+
+/**
+ * @Wilfried Teitang
+ * Routen auf der Router-Instanz definieren [Fachobjekt Grupe]
+ */
 router.get("/FormGroup", function(req, res) {
     res.render("FormGroup");
 });
@@ -38,6 +59,11 @@ router.get("/ListeGroup", function(req, res) {
 router.get("/DetailsGroup", function(req, res) {
     res.render("DetailsGroup", { group: group });
 });
+
+/**
+ * @Michel Djifack
+ * Routen auf der Router-Instanz definieren [Fachobjekt Grupe]
+ */
 // Bibliothek route 
 router.get("/BiblioForm", function(req, res) {
     res.render("BiblioForm");
@@ -54,5 +80,6 @@ router.get("*", function(req, res, next) {
     res.render("404");
     next();
 });
+
 // Router zugreifbar machen
 module.exports = router;
