@@ -1,6 +1,6 @@
 <!-- 
 
-  Datei wurde von: Michel Djifack fertig gestelt!
+  Datei wurde von: @Michel Djifack fertig gestelt!
 -->
 <!DOCTYPE html>
 <html lang="de">
@@ -21,7 +21,7 @@
             <%let i=0;%>
                 <% for (let elem of persArray) { %>
                     <div class="item" id="<%=bookArray[i].isbn%>">
-                        <p>
+                        <p id="<%=elem.name%>">
                             Hallo Zusammen, <br>
                             <a href="DetailsGroup#<%=elem.name%>">
                                 <%=elem.name%>,

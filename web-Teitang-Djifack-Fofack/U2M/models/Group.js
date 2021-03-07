@@ -1,7 +1,7 @@
-/**  datei wurde von xxxxxxxxxxxxxxxxxxxxx fertig gestelt
- * 
- * 
- * 
+/* 
+ *Diese Datei wurde von: 
+ * Wilfried Teitang
+ *angelegt
  */
 function Group(GruppeName, AdminName, ModulleZiel, GruppenRaum, GruppenLink, Anfangsdatum, Endsdatum, AnzahlTeilnehmer) {
     this.GruppeName = GruppeName;

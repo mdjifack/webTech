@@ -1,5 +1,5 @@
 /* 
-Datei wurde von:xxxxxxxxxxxxxxxxxxxxx fertig gestelt!
+Datei wurde von:Daniele Fofack fertig gestelt!
  */
 
 main {
@@ -35,4 +35,19 @@ table a {
 tbody tr:hover {
     background-color: #2c3e50;
     color: #fff;
+}
+[href*="#"] { color: green; }
+
+/* button stylen in jeder Kacheln  */
+.elemBtn{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.elemBtn a{
+    border: 1px solid #fff;
+    border-radius: 25% 25% 25% 25%;
+    background-color: #FFA500;
+    padding: 5px;
+    margin: 5px;
 }

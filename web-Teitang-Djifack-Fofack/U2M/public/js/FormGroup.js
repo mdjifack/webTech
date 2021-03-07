@@ -1,4 +1,4 @@
-/* * Datei wurde von: xxxxxxxxxxxxxxxxx fertig gestelt!
+/* * Datei wurde von: @Wilfried Teitang fertig gestelt!
  */
 const group = require("../../models/Group.js");
 const table = group.GroupTable;

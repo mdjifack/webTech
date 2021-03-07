@@ -1,7 +1,7 @@
-/**  datei wurde von xxxxxxxxxxxxxxxxxxxxx fertig gestelt
- * 
- * 
- * 
+/* 
+ *Diese Datei wurde von: 
+ * Fofack,Daniele
+ *angelegt
  */
 function Study(vorname, name, hochschule, fachbereich, studiengang, aktuelleSemester, module, note, semesterabgelegt) {
     this.name = name;
