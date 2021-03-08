@@ -19,66 +19,24 @@
         <main>
             <p>Die folgende Tabelle gibt Ihnen Auskunft über die Gruppe.</p>
             <p>Sie können auf den GruppeNamen, um weitere Informationen über die entspreschende Gruppe zu erhalten.</p> <br>
-           <!-- <table id="callTable">
-                <thead>
-                    <tr>
-                        <th>GruppeName</th>
-                        <th>AdminName</th>
-                        <th>ModulleZiel</th>
-                        <th>GruppenRaum</th>
-                        <th>GruppenLink</th>
-                        <th>Anfangsdatum</th>
-                        <th>Ende Datum</th>
-                        <th>AnzahlTeilnehmer</th>
-                </thead>
-                <tbody>
-                    <% for (let elem of group) { %>
-                        <tr>
-                            <td>
-                                <a href="DetailsStudy#<%=elem.name%>">
-                                    <%=elem.GruppeName%>
-                                </a>
-                            </td>
-                            <td>
-                                <%=elem.AdminName%>
-                            </td>
-                            <td>
-                                <%=elem.ModulleZiel%>
-                            </td>
-                            <td>
-                                <%=elem.GruppenRaum%>
-                            </td>
-                            <td>
-                                <%=elem.GruppenLink%>
-                            </td>
-                            <td>
-                                <%=elem.Anfangsdatum%>
-                            </td>
-                            <td>
-                                <%=elem.Endsdatum%>
-                            </td>
-                            <td>
-                                <%=elem.AnzahlTeilnehmer%>
-                            </td>
-                        </tr>
-                        <% } %>
-
-                </tbody>
-                <tbody>
-                </tbody>
-            </table>-->
             <% for (let elem of group) { %>
-            <div id="container">
-           
-                <div id="head" ><h1><a href="DetailsStudy#<%=elem.name%>"><%=elem.GruppeName%></a></h1></div>
-                    <div id="navigation">
+                <div class="container">
+
+                    <div class="head">
+                        <h1>
+                            <a href="DetailsStudy#<%=elem.name%>">
+                                <%=elem.GruppeName%>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="navigation">
                         <h2>
-                            
+
                             <%=elem.AdminName%>
                         </h2>
-                            
+
                     </div>
-                    <div id="content">
+                    <div class="content">
                         <h2>Inhalt</h2>
                         <ul>
                             <li>ModulleZiel :
@@ -100,11 +58,11 @@
                                 <%=elem.AnzahlTeilnehmer%>
                             </li>
                         </ul>
-                            
+
                     </div>
-                   
-            </div>
-            <% } %>
+
+                </div>
+                <% } %>
         </main>
         <%- include("footer.ejs") %>
 </body>

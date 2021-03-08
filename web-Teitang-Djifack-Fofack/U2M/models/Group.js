@@ -1,6 +1,6 @@
 /* 
  *Diese Datei wurde von: 
- * Wilfried Teitang
+ * @Wilfried Teitang
  *angelegt
  */
 function Group(GruppeName, AdminName, ModulleZiel, GruppenRaum, GruppenLink, Anfangsdatum, Endsdatum, AnzahlTeilnehmer) {

@@ -1,76 +1,118 @@
 /* Datei wurde von: Wilfried Teitang fertig gestelt! 
  *
  */
+
 body {
     background-color: whitesmoke;
     font-size: 1em;
     font-family: "Courier New", Courier, monospace;
-    color:black;
-    padding:0px;
-    margin:0px;
-    }
-    
-    a {color: #ff0000;}
-    a:visited {color:#00ff00;}
-    a:hover {color: #0000ff;}
-    a:active { color:#808080;}
-    
-    h1 {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #ff0000;
+}
+
+a:visited {
+    color: #00ff00;
+}
+
+a:hover {
+    color: #0000ff;
+}
+
+a:active {
+    color: #808080;
+}
+
+h1 {
     font-size: 1.5em;
     padding: 20px 10px 20px 10px;
-    margin:0px;
-    color: #ffffff; 
-    }
-    
-    h2 {
-    font-size:1.2em;
+    margin: 0px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.2em;
     padding: 10px 10px 5px 10px;
-    margin:0px;
+    margin: 0px;
     color: #00304F;
-    }
-    
-    /* ----------container zentriert das layout-------------- */
-    #container {
+}
+
+
+/* ----------container zentriert das layout-------------- */
+
+.container {
     width: 800px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    max-height: 300px;
+    margin-bottom: 5em;
     background-color: #FF8E00;
-    border:2px solid #00304F;
-    }
-    
-    /* ----------banner for logo-------------- */
-    #head {
+    border: 2px solid #00304F;
+}
+
+
+/* ----------banner for logo-------------- */
+
+.head {
     background-color: #0000ff;
     padding: 0px;
     margin: 0px;
     background-color: #FF4100;
-    min-height:50px;
-    border-bottom:1px solid #00304F;
-    }
-    
-    /* -----------------Inhalt--------------------- */
-    #content {
+    min-height: 50px;
+    border-bottom: 1px solid #00304F;
+}
+
+
+/* -----------------Inhalt--------------------- */
+
+.content {
     background-color: #00C968;
     padding: 0px;
     margin-left: 200px;
     margin-right: 0px;
-    border-left:1px solid #00304F;
-    }
-    div#content { 
-    min-height:600px;
-    }
-    
-    p {
+    border-left: 1px solid #00304F;
+}
+
+p {
     padding: 5px 10px;
-    margin:0px;
-    }
-    
-    /* --------------left navigavtion------------- */
-    #navigation {
+    margin: 0px;
+}
+
+
+/* --------------left navigavtion------------- */
+
+.navigation {
     float: left;
     width: 200px;
     margin: 0px;
     padding: 0px;
+}
+
+@media screen and (max-width: 921px) {
+    main {
+        font-size: 0.5em;
     }
-    
+    .container {
+        max-width: 450px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    main {
+        font-size: 0.2em;
+    }
+    .container {
+        max-width: 400px;
+        height: auto;
+    }
+}
