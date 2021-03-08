@@ -4,8 +4,8 @@
  *angelegt
  */
 function Study(vorname, name, hochschule, fachbereich, studiengang, aktuelleSemester, module, note, semesterabgelegt) {
-    this.name = name;
     this.vorname = vorname;
+    this.name = name;
     this.hochschule = hochschule;
     this.fachbereich = fachbereich;
     this.studiengang = studiengang;
