@@ -76,10 +76,53 @@
                                 <li>
                                     <h4>Layout</h4>
                                     Wie ist das einheitliche Layout der Web-Anwendung aufgebaut? Welche CSSLayout-Mechanismen wurden eingesetzt und warum?
+                                
+                                    <p>
+                                       Das  Flex- und Gridlayout  wurde in unsere Anwendung verwendet. 
+                                       Da die Flexbox  intelligenter und dynamischer wirkt, kann  Das Layout sich flexibel (im Sinne von Responsive Design) an das verwendete Display anpassen.
+                                        Der Bereich wird ausgefüllt oder die Elemente werden näher zusammengebracht, so dass alles sichtbar bleibt.
+                                        Die Flexbox wurde zum beispiel in der seite von "ListeStudy" und BiblioForm verwendet, um die Button zu positionieren
+                                        und zu stylen. Und in der ListeGroup zur Zentrieren die Informationen über verschiedene die Gruppe.
+                                        Mit dem Grid wird exakt das gemacht, was der Name verspricht: 
+                                        Raster für Webseiten werden erzeugt und definiert. Es können sowohl einfache Zwei- oder Dreispaltenraster als auch mehr Spaltenraster 
+                                        definiert werden. Das Aussehen und die Anzahl der Zeilen können ebenfalls festgelegt werden; 
+                                        es kann aber auch auf das Standardraster zurückgegriffen werden, das automatisch die erforderlichen Zeilen erzeugt.
+                                         Es lassen sich auch die Abstände zwischen den Gitterzellen festlegen und die HTML-Elemente beliebig auf dem Gitter verteilen.
+                                    </p> 
                                 </li>
                                 <li>
                                     <h4>Responsivität</h4>Welche Breakpoints wurden definiert und welche Auswirkung haben sie auf das Layout? Welchem Zweck dienen die definierten Breakpoints im konkreten Anwendungsszenario (z.B. Zielendgeräte)?
                                 </li>
+
+                                     <p>
+                                        <strong> Group</strong> <br>
+                                     Für Dieses Fachobjekt gibt es zwei Breakpunkten im Datei DetailsGroup.css:
+                                     <ul>
+                                     <li> Bei max-width von 800px werden den Border und der box-shadow nicht mehr angezeigt, damit die Informationen
+                                         im  countainer bleiben.
+                                     </li>
+                                     <li>
+                                        Bei max-width von 600px werden die Elemente der Countainer groupDetails genau in der Mitte angeordnet, damit alle Informationen
+                                        in Kleinen Geräte sichtbar sind.
+                                     </li>
+                                    </ul>
+                                    </p>
+
+                                    <p>
+                                        <strong>biblioListe</strong> <br>
+                                     Für Dieses Fachobjekt gibt es drei  Breakpunkten im Datei biblioListe.css:
+                                     <ul>
+                                     <li> Bei max-width von 320px werden das logo, der footer, der  header
+                                         nicht mehr angezeigt. 
+                                     </li>
+                                     <li>
+                                        Bei max-width von 961px der Countainer wird sich wie ein Grid mit zwei Spalten 
+                                     </li>
+                                     <li>
+                                        Bei max-width von 481px der Countainer wird sich wie ein Grid mit eine Spalte 
+                                     </li>
+                                    </ul>
+                                    </p>
 
                             </ol>
                             <li>

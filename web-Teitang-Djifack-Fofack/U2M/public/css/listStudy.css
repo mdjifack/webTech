@@ -51,3 +51,24 @@ justify-content: center;
     padding: 5px;
     margin: 5px;
 }
+@media screen and (max-width: 421px) {
+    #logo,
+    footer,
+    header {
+        display: none;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: auto;
+        font-size:  40px ;
+         
+    }
+}
+@media screen and (max-width: 830px) {
+    main{
+         display: grid;
+         grid-template-columns: auto;
+         
+    }
+}
