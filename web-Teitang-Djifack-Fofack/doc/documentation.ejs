@@ -36,7 +36,9 @@
                             Study Helfer". </strong>Die erste Spalte enthält die Namen der Studenten, die bereit sind zu helfen. Wenn Sie auf den Namen eines Schülers klicken, haben Sie Zugriff auf dessen Zusatzinformationen. Auf der Seite <strong> "Informationen über Study Helfer" </strong>                        werden zusätzliche Informationen über jeden Teilnehmer angezeigt. es gibt 2 Schaltflächen, um auf seine Lerngruppe oder ein von ihm empfohlenes Buch zuzugreifen.
                     </p>
                     <p>
-                        <strong>- Gruppe</strong> <br>
+                        <strong>- Gruppe</strong> <br> Ein Student kann eine Lerngruppe erstellen, indem er das entsprechende Formular ausfüllt.Nach der Eingabe von Informationen wie minimale und maximale Teilnehmerzahl, Gruppenname und Adminname, Start-
+                        und Enddatum kann er seine Gruppe erstellen und auf die Schaltfläche "anlegen" klicken. Wenn die Seite "Gruppe-Listen" geöffnet ist, können Sie weitere Informationen über den Gruppenadministrator erhalten, indem Sie auf seinen
+                        Vornamen oben links im Feld klicken. Die Seite "Gruppe Details" gibt weitere Informationen zu den verschiedenen in der Datenbank vorhandenen Gruppen.
                     </p>
                     <p>
                         <strong>- Bibliothek</strong> <br> Dieses Menü hat ebenfalls drei Untermenüs. das erste <strong> "Formular-Bibliohek"</strong> ist ein Formular zum Ausfüllen, um ein Buch zu empfehlen. Nach Eingabe der erforderlichen Informationen
@@ -62,9 +64,15 @@
                                     Welche HTML-Seiten sind in der Anwendung enthalten? Wie kann zwischen den einzelnen HTML-Seiten navigiert werden? Falls semantiklose Elemente eingesetzt wurden: Warum wurden diese eingesetzt?
                                     <p>
                                         Die Applikation hat 9 Seiten + 1 Dokumentationsseite. Das macht 3 Seiten pro Fachobjekt. <br> - Student (3 Seiten) <br> - Gruppe (3 Seiten) <br> - Bibliothek (3 Seiten) <br><br> Jede Seite hat in der Kopfzeile ein
-                                        Menü mit drei Einträgen (Student, Gruppe, Bibliothek). <br> - jedes Menü hat ein Untermenü, das die 3 Seiten für jedes "Fachobjekt" darstellt. <br> - ein Klick auf das "U2M-Logo führt Sie zur Dokumentation. <br>                                        - in der Fußzeile (auf allen Seiten vorhanden) befindet sich ebenfalls ein Link zur Dokumentation. <br>
+                                        Menü mit drei Einträgen (Student, Gruppe, Bibliothek). <br> - jedes Menü hat ein Untermenü, das die 3 Seiten für jedes "Fachobjekt" darstellt. <br> - ein Klick auf das "U2M-Logo führt Sie zur Dokumentation. <br><br>                                        Die Verwendung von "div"-Elementen wurde zur Strukturierung der internen Elemente der Seiten bevorzugt. Dies gab uns die Möglichkeit, die "id" oder die "class" zu fixieren, um die Manipulation mit dem "css" zu erleichtern.
+                                        Am Ende sind sie bei der Manipulation unseres "Grid" oder "Flex" deutlich besser , da sie auch als "Container" verwendet wurden. - in der Fußzeile (auf allen Seiten vorhanden) befindet sich ebenfalls ein Link zur
+                                        Dokumentation. <br>
                                     </p>
-
+                                    <p>
+                                        Es ist auch möglich, von einer Seite zur anderen zu navigieren, indem Sie die eingebauten Links verwenden, entweder über den Namen des Schülers, einen Gruppennamen oder über Links, die mit speziellen Meldungen hervorgehoben sind, die darauf hinweisen,
+                                        wo man klicken muss. Beachten Sie, dass ein Klick auf das Logo immer zur Dokumentationsseite zurückführt. Diese Seite ist auch über die Links am unteren Rand aller Webseiten in der Anwendung zugänglich. Übersetzt
+                                        mit www.DeepL.com/Translator (kostenlose Version)
+                                    </p>
                                 </li>
                                 <li>
                                     <h4>Layout</h4>
