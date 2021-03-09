@@ -98,12 +98,16 @@
                                         <strong> Group</strong> <br>
                                      Für Dieses Fachobjekt gibt es zwei Breakpunkten im Datei DetailsGroup.css:
                                      <ul>
-                                     <li> Bei max-width von 800px werden den Border und der box-shadow nicht mehr angezeigt, damit die Informationen
+                                     <li> Bei max-width von 978px werden den Border und der box-shadow nicht mehr angezeigt, damit die Informationen
                                          im  countainer bleiben.
                                      </li>
                                      <li>
-                                        Bei max-width von 600px werden die Elemente der Countainer groupDetails genau in der Mitte angeordnet, damit alle Informationen
-                                        in Kleinen Geräte sichtbar sind.
+                                        Bei max-width von 600px werden die Elemente der Countainer groupDetails genau in der Mitte angeordnet und die Schriftgröße,
+                                        wird vergrößen damit alle Informationen in Kleinen Geräte sichtbar sind.
+                                     </li>
+                                     <li>
+                                        Bei max-width von 421px werden das logo, der footer, der  header
+                                        nicht mehr angezeigt, und die Schriftgröße wird nochmal angepasst.
                                      </li>
                                     </ul>
                                     </p>
@@ -130,6 +134,15 @@
                                 <ol>
                                     <li>
                                         <h4>Modulstruktur</h4>Wie und nach welchen Prinzipien wurden die Module der Server-Implementierung strukturiert?
+                                        <p>
+                                            Um die Module der Server-Implementierung zu strukturieren, wurde die Serverseite Technologie <strong>Espress</strong>
+                                            angewendet. Die Struktur ist durch Kombination von Middlewares aufgebaut.In der Router,wird zuerst
+                                            "Espress" eingebunden. Bei Eintreten einer Anfrage wird eine folge von Get-request durchgeführt,
+                                             bis die entsprechende Seite mit der Methode "render()" züruckliefert wird. Und In der Apps wird auch
+                                             Espress eingebunden. Dann wird ein Middleware gebunden um die Anfrage zu lesen und eine 
+                                             kette von methoden Post durchgeführt um die verschiedene Formulare zu unterstützen. 
+                                           
+                                        </p>
                                     </li>
                                     <li>
                                         <h4>Unterstützte URLs/Endpunkte</h4>Welche HTTP-Anfragen werden durch das Routing des Servers unterstützt? Beschreibung als Tabelle der Form:

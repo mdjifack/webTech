@@ -57,29 +57,35 @@ h2 {
     margin-bottom: 5em;
     background-color: #FF8E00;
     border: 2px solid #00304F;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px black;
 }
 
 
 /* ----------banner for logo-------------- */
 
 .head {
-    background-color: #0000ff;
+    background-color: #00eeff;
     padding: 0px;
     margin: 0px;
-    background-color: #FF4100;
+    background-color: lightskyblue;
     min-height: 50px;
     border-bottom: 1px solid #00304F;
+    border-radius: 40%;
 }
 
 
 /* -----------------Inhalt--------------------- */
 
 .content {
-    background-color: #00C968;
+    display: flex;
+    flex-direction: column;
+    background-color: #00c975;
     padding: 0px;
-    margin-left: 200px;
+    /*margin-left: 200px;
     margin-right: 0px;
-    border-left: 1px solid #00304F;
+    border-left: 1px solid #00304F;*/
+    border-radius: 5%;
 }
 
 p {
@@ -94,16 +100,15 @@ p {
     float: left;
     width: 200px;
     margin: 0px;
-    padding: 0px;
+    
 }
 
 @media screen and (max-width: 921px) {
-    main {
-        font-size: 15px;
-    }
+    
     .container {
         max-width: 450px;
         height: auto;
+        box-shadow: none;
     }
 }
 
@@ -115,4 +120,11 @@ p {
         max-width: 400px;
         height: auto;
     }
+}
+
+@media screen and (max-width: 428px) {
+   footer,header{
+       display:none;
+   }
+
 }

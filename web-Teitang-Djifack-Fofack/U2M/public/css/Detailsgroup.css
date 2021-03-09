@@ -22,7 +22,7 @@
     list-style-type:square;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 978px) {
     .groupDetails {
         border: none;
         box-shadow:none;
@@ -32,5 +32,15 @@
 @media screen and (max-width: 600px) {
     .groupDetails {
         justify-content: center;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 421px) {
+    .groupDetails {
+        font-size: 1.5em;
+    }
+    footer,header{
+        display: none;
     }
 }
