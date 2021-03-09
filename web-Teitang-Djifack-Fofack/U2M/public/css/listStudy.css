@@ -63,21 +63,20 @@ tbody tr:hover {
     footer {
         display: none;
     }
-    #callTable {
-        min-height: 50em;
-        width: 30em;
-    }
+    
     main {
         font-size: 3em;
     }
 }
 
-@media screen and (max-width: 680px) {
-    header {
-        display: none;
+
+@media screen and (max-width: 480px) {
+    main{
+        display: grid;
+        grid-template-columns: auto;   
     }
-    #callTable {
-        max-height: 50em;
-        width: auto;
+
+    .menu li,.sub-menu li{
+        font-size: 100px;
     }
 }
