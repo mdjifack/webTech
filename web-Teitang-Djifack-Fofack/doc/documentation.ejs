@@ -26,15 +26,15 @@
                     <h4>Beschreibung des Anwendungsszenarios</h4>
                     <p>
                         <strong>U2M</strong> ist eine Digitale Bildung Platform. Diese abkürzung steht für <strong> übung
-                         macht den meister</strong> aber dahinter versteckt sich auch eine andere Bedeutung <strong>you
-                         me</strong>.
+                          macht den meister</strong> aber dahinter versteckt sich auch eine andere Bedeutung <strong>you
+                          me</strong>.
                         <strong>U2M</strong> bietet die Möglichkeit, drei Funktionen zu erfüllen. <br> Die Anwendung läuft unter der port: <strong>8040</strong>.
                     </p>
                     <p>
                         <strong>- Student</strong> <br> Ein Student kann sich registrieren, um Studenten zu helfen.Er muss daher das dafür vorgesehene Formular <strong>"Formular für Study Helfer"</strong> ausfüllen, das sich im menü <strong>
-                                    "Student"</strong> befindet. Nach dem Ausfüllen von Informationen wie Name, Universität, Modul, für das er Hilfe anbietet, die in diesem Modul erzielte Note und das Semester, in dem er sich befindet, wird er in der
+                                     "Student"</strong> befindet. Nach dem Ausfüllen von Informationen wie Name, Universität, Modul, für das er Hilfe anbietet, die in diesem Modul erzielte Note und das Semester, in dem er sich befindet, wird er in der
                         Datenbank als helfender Student registriert. Die Liste der Studenten, die bereit sind zu helfen, finden Sie im Untermenü <strong> "Liste der
-                                    Study Helfer". </strong>Die erste Spalte enthält die Namen der Studenten, die bereit sind zu helfen. Wenn Sie auf den Namen eines Schülers klicken, haben Sie Zugriff auf dessen Zusatzinformationen. Auf der Seite <strong> "Informationen über Study Helfer "</strong>werden
+                                     Study Helfer". </strong>Die erste Spalte enthält die Namen der Studenten, die bereit sind zu helfen. Wenn Sie auf den Namen eines Schülers klicken, haben Sie Zugriff auf dessen Zusatzinformationen. Auf der Seite <strong> "Informationen über Study Helfer "</strong>werden
                         zusätzliche Informationen über jeden Teilnehmer angezeigt. es gibt 2 Schaltflächen, um auf seine Lerngruppe oder ein von ihm empfohlenes Buch zuzugreifen.
                     </p>
                     <p>
@@ -129,6 +129,12 @@
                                 <ol>
                                     <li>
                                         <h4>Modulstruktur</h4>Wie und nach welchen Prinzipien wurden die Module der Server-Implementierung strukturiert?
+                                        <p>
+                                            Um die Module der Server-Implementierung zu strukturieren, wurde die Serverseite Technologie <strong>Espress</strong> angewendet. Die Struktur ist durch Kombination von Middlewares aufgebaut.In der Router,wird
+                                            zuerst "Espress" eingebunden. Bei Eintreten einer Anfrage wird eine folge von Get-request durchgeführt, bis die entsprechende Seite mit der Methode "render()" züruckliefert wird. Und In der Apps wird auch Espress
+                                            eingebunden. Dann wird ein Middleware gebunden um die Anfrage zu lesen und eine kette von methoden Post durchgeführt um die verschiedene Formulare zu unterstützen.
+
+                                        </p>
                                     </li>
                                     <li>
                                         <h4>Unterstützte URLs/Endpunkte</h4>Welche HTTP-Anfragen werden durch das Routing des Servers unterstützt? Beschreibung als Tabelle der Form:

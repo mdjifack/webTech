@@ -51,17 +51,16 @@ justify-content: center;
     padding: 5px;
     margin: 5px;
 }
-@media screen and (max-width: 421px) {
+@media screen and (max-width: 480px) {
     #logo,
-    footer,
-    header {
+    footer, {
         display: none;
     }
 
     main{
         display: grid;
         grid-template-columns: auto;
-        font-size:  40px ;
+        font-size:  15px ;
          
     }
 }
