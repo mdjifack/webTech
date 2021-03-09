@@ -97,8 +97,16 @@
                                 <li>
                                     <h4>Responsivität</h4>Welche Breakpoints wurden definiert und welche Auswirkung haben sie auf das Layout? Welchem Zweck dienen die definierten Breakpoints im konkreten Anwendungsszenario (z.B. Zielendgeräte)?
                                 </li>
-
-                                <p>
+                                <li>
+                                    <strong> Student</strong> <br> Für Dieses Fachobjekt gibt es zwei Breakpunkten im Datei listStudy.css:
+                                    <ul>
+                                        <li> Bei max-width von 830px werden das Loga und footer nicht mehr angezeigt. Die minimum höhe des Table wird bei "50em" festgesetzt und die breite bei "30em". Die Schriftgröße wird bei 3 em auch festgesetzt. Das ermöglicht
+                                            der Benutzer mit einem endgerät wie Tablette im portrait modus noch bequem die Daten zu lesen.
+                                        </li>
+                                        <li>
+                                            Bei max-width von 680px wird die header nicht mehr angezeigt und die Tabelle dimensionen wird noch angepasst, damit alle Informationen in Kleinen Geräte sichtbar sind. Max-Höhe wird bei "50em" und widt wird bei auto festgesetzt.
+                                        </li>
+                                    </ul>
                                     <strong> Group</strong> <br> Für Dieses Fachobjekt gibt es zwei Breakpunkten im Datei DetailsGroup.css:
                                     <ul>
                                         <li> Bei max-width von 800px werden den Border und der box-shadow nicht mehr angezeigt, damit die Informationen im countainer bleiben.
@@ -107,9 +115,6 @@
                                             Bei max-width von 600px werden die Elemente der Countainer groupDetails genau in der Mitte angeordnet, damit alle Informationen in Kleinen Geräte sichtbar sind.
                                         </li>
                                     </ul>
-                                </p>
-
-                                <p>
                                     <strong>biblioListe</strong> <br> Für Dieses Fachobjekt gibt es drei Breakpunkten im Datei biblioListe.css:
                                     <ul>
                                         <li> Bei max-width von 320px werden das logo, der footer, der header nicht mehr angezeigt.
@@ -118,10 +123,13 @@
                                             Bei max-width von 961px der Countainer wird sich wie ein Grid mit zwei Spalten
                                         </li>
                                         <li>
-                                            Bei max-width von 481px der Countainer wird sich wie ein Grid mit eine Spalte
+                                            Bei max-width von 481px der Countainer wird sich wie ein Grid mit eine Spalte <br> Das ermöglicht User mit Engerät wie Tablette (961px) und User mit Smartphone(481px) die Daten noch bequem zu lesen.
+
                                         </li>
                                     </ul>
-                                </p>
+
+                                </li>
+
 
                             </ol>
                             <li>
@@ -132,8 +140,10 @@
                                         <p>
                                             Um die Module der Server-Implementierung zu strukturieren, wurde die Serverseite Technologie <strong>Espress</strong> angewendet. Die Struktur ist durch Kombination von Middlewares aufgebaut.In der Router,wird
                                             zuerst "Espress" eingebunden. Bei Eintreten einer Anfrage wird eine folge von Get-request durchgeführt, bis die entsprechende Seite mit der Methode "render()" züruckliefert wird. Und In der Apps wird auch Espress
-                                            eingebunden. Dann wird ein Middleware gebunden um die Anfrage zu lesen und eine kette von methoden Post durchgeführt um die verschiedene Formulare zu unterstützen.
-
+                                            eingebunden. Dann wird ein Middleware gebunden um die Anfrage zu lesen und eine kette von methoden Post durchgeführt um die verschiedene Formulare zu unterstützen. <br> Die Seite sind mit Hilfe der Template
+                                            "ejs" strukturiert. Das ermöglischt die dynamische erzeugung von daten die wir in einem oder mehrehren arrays gespeichert haben. Die Daten werden Erstmal in die Datei "Router.js" gelesen nach dem der Client
+                                            eine Anfrage/request gemacht hast. Dann wird Die Datei Router gleichzeitig mit der Datei Apps miteinander laufen, um die Daten/Response zu senden. <br> Wir haben auch "include" verwenden, um die header und footer
+                                            in jeder Seite dynamische zu erzeugen.
                                         </p>
                                     </li>
                                     <li>
@@ -207,7 +217,6 @@
                                     </li>
                                 </ol>
                             </li>
-
                     </ol>
                     </li>
                     <li>
@@ -216,7 +225,6 @@
                         weitergeladet. Da haben Sie die Möglichkeit durch jeder seite zu navigieren mit Hilfe der Navigationsmenü im kopf der Anwendung.<br>
                         <strong>Start der Anwendung</strong> <br> Bitte stellen Sie sicher, dass Sie Node im Hauptordner "web-Teitang-Fofack-Djifack" installiert haben, falls dieser nach dem Entpacken nicht vorhanden ist. Prüfen Sie dann in der Datei
                         "package.json", ob die Erweiterungen "ejs, express und body.parser" vorhanden sind. <br> Stellen Sie sicher, dass die Datei "app.js" auf Port 8040 lauscht oder an jedem anderen freien Port.
-
                     </li>
                     <li>
                         <h4>Autorenschaft der Quellcode-Dateien</h4>
